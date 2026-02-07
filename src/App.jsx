@@ -42,6 +42,14 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const handleVisibility = () => {
+      document.title = document.hidden ? "Where 'd You Go?" : 'Dhanshri Ahir';
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
+    return () => document.removeEventListener('visibilitychange', handleVisibility);
+  }, []);
+
   return (
     <ThemeProvider>
       <div className="app">
