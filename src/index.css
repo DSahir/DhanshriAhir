@@ -46,17 +46,6 @@ html {
   --color-contact: #6ee7b7;
   --color-contact-bg: rgba(110, 231, 183, 0.06);
 
-  /* Gradient */
-  --gradient-body: linear-gradient(
-    180deg,
-    #0b0b1a 0%,
-    #10082a 15%,
-    #0a1628 30%,
-    #12160e 50%,
-    #1a0a1a 70%,
-    #081a14 85%,
-    #0b0b1a 100%
-  );
 }
 
 /* Light theme */
@@ -94,26 +83,57 @@ html {
   --color-contact: #059669;
   --color-contact-bg: rgba(5, 150, 105, 0.06);
 
-  /* Gradient */
-  --gradient-body: linear-gradient(
-    180deg,
-    #f0f0f5 0%,
-    #ece8f8 15%,
-    #e4f0f5 30%,
-    #f2efe4 50%,
-    #f5e8f0 70%,
-    #e4f5ee 85%,
-    #f0f0f5 100%
-  );
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: var(--gradient-body);
-  background-attachment: fixed;
+  background: var(--bg-primary);
   color: var(--text-secondary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: color 0.3s;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Interactive mouse-following gradient blob */
+.mouse-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.mouse-gradient-blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.18;
+  transition: transform 0.3s ease-out, opacity 0.3s;
+  will-change: transform;
+}
+
+[data-theme="light"] .mouse-gradient-blob {
+  opacity: 0.12;
+}
+
+.mouse-gradient-blob--primary {
+  background: radial-gradient(circle, #a78bfa 0%, transparent 70%);
+}
+
+.mouse-gradient-blob--secondary {
+  background: radial-gradient(circle, #67e8f9 0%, transparent 70%);
+  width: 500px;
+  height: 500px;
+}
+
+.mouse-gradient-blob--tertiary {
+  background: radial-gradient(circle, #f472b6 0%, transparent 70%);
+  width: 400px;
+  height: 400px;
 }

@@ -2,20 +2,15 @@
 .section {
   padding: 88px 24px;
   min-height: 60vh;
-  background: var(--bg-primary);
+  background: transparent;
+  position: relative;
+  z-index: 1;
   transition: background 0.3s;
 }
 
 .section-alt {
-  background: var(--bg-secondary);
+  background: transparent;
 }
-
-/* Per-section pastel backgrounds */
-.section-about { background: var(--color-about-bg); }
-.section-education { background: var(--color-education-bg); }
-.section-experience { background: var(--color-experience-bg); }
-.section-projects { background: var(--color-projects-bg); }
-.section-contact { background: var(--color-contact-bg); }
 
 .section-container {
   max-width: 1000px;
@@ -87,7 +82,7 @@
 }
 
 .about-text strong {
-  color: var(--text-primary);
+  color: var(--color-about);
   font-weight: 600;
 }
 
@@ -133,7 +128,7 @@
   align-items: center;
   gap: 6px;
   padding: 9px 18px;
-  background: var(--accent);
+  background: var(--color-about);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -143,12 +138,13 @@
   letter-spacing: -0.1px;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .resume-btn:hover {
-  background: var(--accent-hover);
+  background: var(--color-about);
   transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
 }
 
 /* ======== Typing Animation ======== */
@@ -241,6 +237,14 @@
   letter-spacing: -0.2px;
 }
 
+.section-experience .timeline-content h3 {
+  color: var(--color-experience);
+}
+
+.section-education .timeline-content h3 {
+  color: var(--color-education);
+}
+
 .timeline-content h4 {
   font-size: 0.95rem;
   color: var(--text-secondary);
@@ -276,6 +280,34 @@
   transform: translateY(-3px);
   background: var(--bg-card-hover);
   box-shadow: 0 8px 40px var(--glass-shadow);
+}
+
+/* Per-section pastel hover glow on cards */
+.section-about .card:hover {
+  border-color: rgba(167, 139, 250, 0.25);
+  box-shadow: 0 0 24px rgba(167, 139, 250, 0.12), 0 8px 40px var(--glass-shadow);
+}
+.section-education .card:hover {
+  border-color: rgba(103, 232, 249, 0.25);
+  box-shadow: 0 0 24px rgba(103, 232, 249, 0.12), 0 8px 40px var(--glass-shadow);
+}
+.section-experience .card:hover {
+  border-color: rgba(251, 191, 36, 0.25);
+  box-shadow: 0 0 24px rgba(251, 191, 36, 0.12), 0 8px 40px var(--glass-shadow);
+}
+.section-projects .card:hover {
+  border-color: rgba(244, 114, 182, 0.25);
+  box-shadow: 0 0 24px rgba(244, 114, 182, 0.12), 0 8px 40px var(--glass-shadow);
+}
+.section-contact .card:hover {
+  border-color: rgba(110, 231, 183, 0.25);
+  box-shadow: 0 0 24px rgba(110, 231, 183, 0.12), 0 8px 40px var(--glass-shadow);
+}
+
+/* Pastel glow on experience collapsible categories */
+.exp-category:hover {
+  border-color: rgba(251, 191, 36, 0.25);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.1), 0 4px 24px var(--glass-shadow);
 }
 
 /* ======== Experience Collapsible (Glass) ======== */
@@ -382,7 +414,7 @@
 }
 
 .project-card-header h3 {
-  color: var(--text-primary);
+  color: var(--color-projects);
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: -0.2px;
@@ -447,7 +479,7 @@
 }
 
 .contact-info h3 {
-  color: var(--text-primary);
+  color: var(--color-contact);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 12px;
@@ -522,12 +554,13 @@
   font-family: inherit;
   letter-spacing: -0.1px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .submit-btn:hover {
-  background: var(--accent-hover);
+  background: var(--color-contact);
   transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(110, 231, 183, 0.3);
 }
 
 .success-message {

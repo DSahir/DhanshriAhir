@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from './components/ThemeContext';
+import MouseGradient from './components/MouseGradient';
 import Header from './components/Header';
 import About from './components/About';
 import Education from './components/Education';
@@ -53,6 +54,7 @@ function App() {
   return (
     <ThemeProvider>
       <div className="app">
+        <MouseGradient />
         <Header activeSection={activeSection} onNavigate={handleNavigate} />
         <main className="main-content">
           <About />

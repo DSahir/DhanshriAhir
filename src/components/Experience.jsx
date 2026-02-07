@@ -117,7 +117,7 @@ const experienceCategories = [
 ];
 
 function Experience() {
-  const [openCategories, setOpenCategories] = useState({ 0: true, 1: true, 2: true, 3: true, 4: true });
+  const [openCategories, setOpenCategories] = useState({ 0: true });
 
   const toggleCategory = (index) => {
     setOpenCategories((prev) => ({ ...prev, [index]: !prev[index] }));
@@ -135,7 +135,9 @@ function Experience() {
                 onClick={() => toggleCategory(catIndex)}
               >
                 <span className="exp-category-title">{category.title}</span>
-                <span className="exp-category-count">{category.items.length}</span>
+                {openCategories[catIndex] && (
+                  <span className="exp-category-count">{category.items.length}</span>
+                )}
                 <svg
                   className="exp-chevron"
                   width="20"
