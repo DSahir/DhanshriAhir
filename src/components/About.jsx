@@ -56,6 +56,7 @@ function About() {
             />
             <p className="avatar-email">dhanshri@example.com</p>
             <p className="avatar-degree">MS in Computer Science</p>
+            <p className="avatar-degree-secondary">BTech in Computer Engineering</p>
           </div>
           <div className="about-text">
             <p>

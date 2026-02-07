@@ -1,6 +1,6 @@
-/* ======== Sections (base + 10% more spacing: 80px -> 88px) ======== */
+/* ======== Sections ======== */
 .section {
-  padding: 88px 24px;
+  padding: 62px 24px;
   min-height: 60vh;
   background: transparent;
   position: relative;
@@ -87,6 +87,15 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-about);
+  letter-spacing: -0.1px;
+}
+
+.avatar-degree-secondary {
+  text-align: center;
+  margin-top: 2px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
   letter-spacing: -0.1px;
 }
 
@@ -273,24 +282,36 @@
   font-size: 0.85rem;
   color: var(--text-faint);
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+}
+
+/* Education card with top-right link icon */
+.edu-card {
+  position: relative;
 }
 
 .institution-link {
-  display: inline-flex;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--text-faint);
   text-decoration: none;
-  padding: 2px;
-  border-radius: 4px;
-  transition: color 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
 .section-education .institution-link:hover {
   color: var(--color-education);
+  border-color: var(--color-education);
+  background: var(--color-education-bg);
 }
 
 .timeline-content p {
@@ -444,6 +465,25 @@
 .exp-category-body.open {
   max-height: 2000px;
   padding: 8px 24px 24px;
+}
+
+/* Collapsed preview: show item titles */
+.exp-collapsed-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 24px 14px;
+}
+
+.exp-collapsed-item {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--color-experience-bg);
+  border: 1px solid rgba(251, 191, 36, 0.1);
+  padding: 3px 12px;
+  border-radius: 8px;
+  letter-spacing: -0.1px;
 }
 
 /* Experience list */
