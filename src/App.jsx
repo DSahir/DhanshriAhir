@@ -58,9 +58,13 @@ function App() {
         <Header activeSection={activeSection} onNavigate={handleNavigate} />
         <main className="main-content">
           <About />
+          <div className="section-divider" />
           <Education />
+          <div className="section-divider" />
           <Experience />
+          <div className="section-divider" />
           <Projects />
+          <div className="section-divider" />
           <Contact />
         </main>
         <footer className="footer">

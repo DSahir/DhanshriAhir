@@ -73,6 +73,23 @@
   box-shadow: 0 8px 32px var(--glass-shadow);
 }
 
+.avatar-email {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: -0.1px;
+}
+
+.avatar-degree {
+  text-align: center;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-about);
+  letter-spacing: -0.1px;
+}
+
 .about-text p {
   font-size: 1rem;
   line-height: 1.75;
@@ -256,6 +273,24 @@
   font-size: 0.85rem;
   color: var(--text-faint);
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.institution-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-faint);
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+.section-education .institution-link:hover {
+  color: var(--color-education);
 }
 
 .timeline-content p {
@@ -308,6 +343,32 @@
 .exp-category:hover {
   border-color: rgba(251, 191, 36, 0.25);
   box-shadow: 0 0 20px rgba(251, 191, 36, 0.1), 0 4px 24px var(--glass-shadow);
+}
+
+/* Stronger glow for light theme */
+[data-theme="light"] .section-about .card:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: 0 0 32px rgba(124, 58, 237, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .section-education .card:hover {
+  border-color: rgba(8, 145, 178, 0.35);
+  box-shadow: 0 0 32px rgba(8, 145, 178, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .section-experience .card:hover {
+  border-color: rgba(217, 119, 6, 0.35);
+  box-shadow: 0 0 32px rgba(217, 119, 6, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .section-projects .card:hover {
+  border-color: rgba(219, 39, 119, 0.35);
+  box-shadow: 0 0 32px rgba(219, 39, 119, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .section-contact .card:hover {
+  border-color: rgba(5, 150, 105, 0.35);
+  box-shadow: 0 0 32px rgba(5, 150, 105, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .exp-category:hover {
+  border-color: rgba(217, 119, 6, 0.35);
+  box-shadow: 0 0 28px rgba(217, 119, 6, 0.15), 0 4px 24px var(--glass-shadow);
 }
 
 /* ======== Experience Collapsible (Glass) ======== */

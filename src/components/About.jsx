@@ -54,6 +54,8 @@ function About() {
               src="https://api.dicebear.com/7.x/avataaars/svg?seed=Dhanshri&backgroundColor=e94560"
               alt="Dhanshri Ahir"
             />
+            <p className="avatar-email">dhanshri@example.com</p>
+            <p className="avatar-degree">MS in Computer Science</p>
           </div>
           <div className="about-text">
             <p>
