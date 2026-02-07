@@ -34,7 +34,7 @@ html {
   --blur: 20px;
   --input-bg: rgba(255, 255, 255, 0.04);
 
-  /* Pastel section colors (dark mode: muted/deep pastels) */
+  /* Pastel section colors (dark mode) */
   --color-about: #a78bfa;
   --color-about-bg: rgba(167, 139, 250, 0.06);
   --color-education: #67e8f9;
@@ -45,6 +45,18 @@ html {
   --color-projects-bg: rgba(244, 114, 182, 0.06);
   --color-contact: #6ee7b7;
   --color-contact-bg: rgba(110, 231, 183, 0.06);
+
+  /* Gradient */
+  --gradient-body: linear-gradient(
+    180deg,
+    #0b0b1a 0%,
+    #10082a 15%,
+    #0a1628 30%,
+    #12160e 50%,
+    #1a0a1a 70%,
+    #081a14 85%,
+    #0b0b1a 100%
+  );
 }
 
 /* Light theme */
@@ -70,7 +82,7 @@ html {
   --blur: 20px;
   --input-bg: rgba(255, 255, 255, 0.6);
 
-  /* Pastel section colors (light mode: vibrant pastels) */
+  /* Pastel section colors (light mode) */
   --color-about: #7c3aed;
   --color-about-bg: rgba(124, 58, 237, 0.06);
   --color-education: #0891b2;
@@ -81,14 +93,27 @@ html {
   --color-projects-bg: rgba(219, 39, 119, 0.06);
   --color-contact: #059669;
   --color-contact-bg: rgba(5, 150, 105, 0.06);
+
+  /* Gradient */
+  --gradient-body: linear-gradient(
+    180deg,
+    #f0f0f5 0%,
+    #ece8f8 15%,
+    #e4f0f5 30%,
+    #f2efe4 50%,
+    #f5e8f0 70%,
+    #e4f5ee 85%,
+    #f0f0f5 100%
+  );
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: var(--bg-primary);
+  background: var(--gradient-body);
+  background-attachment: fixed;
   color: var(--text-secondary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background 0.3s, color 0.3s;
+  transition: color 0.3s;
 }

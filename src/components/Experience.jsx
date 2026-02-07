@@ -117,7 +117,7 @@ const experienceCategories = [
 ];
 
 function Experience() {
-  const [openCategories, setOpenCategories] = useState({ 0: true });
+  const [openCategories, setOpenCategories] = useState({ 0: true, 1: true, 2: true, 3: true, 4: true });
 
   const toggleCategory = (index) => {
     setOpenCategories((prev) => ({ ...prev, [index]: !prev[index] }));

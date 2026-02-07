@@ -2,7 +2,13 @@ import { useState } from 'react';
 import { useTheme } from './ThemeContext';
 import './Header.css';
 
-const navItems = ['About', 'Education', 'Experience', 'Projects', 'Contact'];
+const navItems = [
+  { name: 'About', colorClass: 'nav-about' },
+  { name: 'Education', colorClass: 'nav-education' },
+  { name: 'Experience', colorClass: 'nav-experience' },
+  { name: 'Projects', colorClass: 'nav-projects' },
+  { name: 'Contact', colorClass: 'nav-contact' },
+];
 
 function Header({ activeSection, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,15 +29,15 @@ function Header({ activeSection, onNavigate }) {
           <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
             {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className={`nav-link ${activeSection === item ? 'active' : ''}`}
+                key={item.name}
+                href={`#${item.name.toLowerCase()}`}
+                className={`nav-link ${item.colorClass} ${activeSection === item.name ? 'active' : ''}`}
                 onClick={(e) => {
                   e.preventDefault();
-                  handleClick(item);
+                  handleClick(item.name);
                 }}
               >
-                {item}
+                {item.name}
               </a>
             ))}
           </nav>
