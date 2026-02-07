@@ -19,9 +19,9 @@ const educationData = [
 
 function Education() {
   return (
-    <section id="education" className="section section-alt">
+    <section id="education" className="section section-education">
       <div className="section-container">
-        <h2 className="section-title">Education</h2>
+        <h2 className="section-title title-education">Education</h2>
         <div className="timeline">
           {educationData.map((item, index) => (
             <div key={index} className="timeline-item">

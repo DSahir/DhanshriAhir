@@ -1,10 +1,52 @@
+import { useState, useEffect, useRef } from 'react';
 import './Section.css';
+
+const phrases = ['a Frontend Designer', 'a Masters Student', 'looking for a Job'];
+
+function TypingAnimation() {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    const current = phrases[phraseIndex];
+
+    if (!isDeleting && displayText === current) {
+      timeoutRef.current = setTimeout(() => setIsDeleting(true), 1800);
+    } else if (isDeleting && displayText === '') {
+      setIsDeleting(false);
+      setPhraseIndex((prev) => (prev + 1) % phrases.length);
+    } else {
+      const speed = isDeleting ? 40 : 80;
+      timeoutRef.current = setTimeout(() => {
+        setDisplayText(
+          isDeleting
+            ? current.substring(0, displayText.length - 1)
+            : current.substring(0, displayText.length + 1)
+        );
+      }, speed);
+    }
+
+    return () => clearTimeout(timeoutRef.current);
+  }, [displayText, isDeleting, phraseIndex]);
+
+  return (
+    <div className="typing-wrapper">
+      <span className="typing-static">I am </span>
+      <span className="typing-dynamic">
+        {displayText}
+        <span className="typing-cursor">|</span>
+      </span>
+    </div>
+  );
+}
 
 function About() {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section section-about">
       <div className="section-container">
-        <h2 className="section-title">About Me</h2>
+        <h2 className="section-title title-about">About Me</h2>
         <div className="about-content">
           <div className="about-avatar">
             <img
@@ -55,6 +97,7 @@ function About() {
             </div>
           </div>
         </div>
+        <TypingAnimation />
       </div>
     </section>
   );

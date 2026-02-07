@@ -124,9 +124,9 @@ function Experience() {
   };
 
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section section-experience">
       <div className="section-container">
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title title-experience">Experience</h2>
         <div className="experience-categories">
           {experienceCategories.map((category, catIndex) => (
             <div key={catIndex} className="exp-category">
