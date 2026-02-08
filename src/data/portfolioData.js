@@ -117,80 +117,38 @@ const portfolioData = {
       ],
     },
     {
-      title: 'Research Experience',
+      title: 'Research and Publication',
       items: [
         {
-          role: 'Undergraduate Research Assistant',
-          organization: 'Machine Learning Lab, University of Technology',
-          period: 'Aug 2023 - May 2024',
-          location: '',
-          logo: '/logos/research-lab.png', // Place logo at public/logos/research-lab.png
-          link: '',
-          points: [
-            'Conducted research on natural language processing techniques for sentiment analysis of social media data.',
-            'Implemented transformer-based models using PyTorch, achieving 92% classification accuracy on benchmark datasets.',
-            'Co-authored a research paper submitted to the International Conference on Machine Learning Applications.',
-          ],
-        },
-      ],
-    },
-    {
-      title: 'Achievements',
-      items: [
-        {
-          role: 'Smart India Hackathon 2023 - Finalist',
-          organization: 'Ministry of Education, Government of India',
-          period: 'Dec 2023',
-          location: 'India',
-          logo: '/logos/sih.png', // Place logo at public/logos/sih.png
-          link: '',
-          points: [
-            'Led a team of 6 to develop an AI-powered crop disease detection system using computer vision.',
-            'Achieved top 10 finish among 500+ competing teams nationally.',
-          ],
-        },
-        {
-          role: "Dean's List - Academic Excellence",
-          organization: 'University of Technology',
-          period: '2021 - 2024',
-          location: '',
-          logo: '',
-          link: '',
-          points: [
-            'Maintained a CGPA of 9.2/10 across all semesters.',
-            'Awarded merit scholarship for outstanding academic performance.',
-          ],
-        },
-      ],
-    },
-    {
-      title: 'Publications',
-      items: [
-        {
-          role: 'Sentiment Analysis of Social Media Using Transformer Models',
+          role: 'Real-Time Classification of Leukocytes Using Deep Learning in Microscopic Imaging',
           organization:
-            'International Journal of Computational Linguistics, Vol. 12, Issue 3',
+            'International Journal of Research in Engineering, Science and Management — Volume 7, Issue 12, December 2024',
           period: '2024',
           location: '',
-          logo: '',
-          link: '',
+          logo: '/logos/ijresm.png', // Place logo at public/logos/ijresm.png
+          link: 'https://www.ijresm.com/storage/articles/3/IJRESM_V7_I12_20.pdf',
           points: [
-            'Proposed a hybrid BERT-LSTM architecture for multi-label sentiment classification.',
-            'Demonstrated 4.5% improvement over baseline models on the SemEval-2023 dataset.',
-            'DOI: 10.xxxx/sample-doi-12345',
+            'Achieved 97%+ classification accuracy in leukocyte identification by designing and training a CNN-based deep learning model on microscopic blood smear images, reducing reliance on manual examination.',
+            'Improved model generalization across varying imaging conditions by applying data augmentation and transfer learning techniques to overcome limited labeled biomedical datasets.',
+            'Enhanced feature discrimination of leukocyte morphology by integrating attention mechanisms into the CNN architecture, increasing interpretability for diagnostic use.',
+            'Streamlined preprocessing and classification workflow for real-time analysis by building an end-to-end pipeline from image normalization to automated prediction.',
+            'Enabled scalable automated hematology screening by demonstrating model suitability for real-time microscopic image processing in clinical and point-of-care settings.',
+            'Validated system performance through experimental evaluation on benchmark leukocyte datasets, establishing reliability for computer-aided diagnostic applications.',
           ],
         },
         {
-          role: 'A Survey on Real-Time Object Detection in Edge Computing',
+          role: 'NLP-based Interview Analysis Framework',
           organization:
-            'IEEE Conference on Embedded Systems, Proceedings 2024',
+            'Topic Modeling & Change Point Detection on Conversational Transcripts',
           period: '2024',
           location: '',
-          logo: '',
+          logo: '/logos/nlp-research.png', // Place logo at public/logos/nlp-research.png
           link: '',
           points: [
-            'Reviewed 50+ papers on lightweight CNN architectures for resource-constrained devices.',
-            'Provided a comparative analysis of YOLOv8, EfficientDet, and MobileNet-SSD on Raspberry Pi.',
+            'Led a 3-member team to build an NLP-based interview analysis framework, reducing subjective evaluation bias by applying probabilistic topic modeling (LDA) and topic change point detection on real-world interview transcripts.',
+            'Analyzed 138 mock interviews (≈10.5 hours) from 69 MIT students, enabling large-scale conversational insights by performing end-to-end NLP preprocessing including tokenization, lemmatization, stopword removal, and transcript normalization.',
+            'Evaluated and compared 5+ topic modeling and topic shift detection approaches, grounded in a survey of 10+ research papers, using coherence scores, LDA, LSA, and CPD to justify model and parameter selection.',
+            'Improved topic interpretability and temporal segmentation, measured via coherence trends and dominant-topic distributions, by tuning LDA/LSA hyperparameters and applying change point detection to topic probability time series.',
           ],
         },
       ],
