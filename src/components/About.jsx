@@ -65,7 +65,7 @@ function About() {
               alt={personal.name}
             />
             <p className="avatar-email">{personal.email}</p>
-            <p className="avatar-degree">MS in Computer Science</p>
+            <p className="avatar-degree">Masters in Computer Science</p>
             <p className="avatar-degree-secondary">BTech in Computer Engineering</p>
           </div>
           <div className="about-text">

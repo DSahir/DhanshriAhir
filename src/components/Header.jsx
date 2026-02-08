@@ -5,6 +5,14 @@ import './Header.css';
 
 const { personal } = portfolioData;
 
+const logoColors = [
+  'var(--color-about)',
+  'var(--color-education)',
+  'var(--color-experience)',
+  'var(--color-projects)',
+  'var(--color-contact)',
+];
+
 const navItems = [
   { name: 'About', colorClass: 'nav-about' },
   { name: 'Education', colorClass: 'nav-education' },
@@ -27,7 +35,13 @@ function Header({ activeSection, onNavigate }) {
       <div className="header-container">
         <a className="header-logo" href="#about" onClick={() => handleClick('About')}>
           <span className="logo-bracket">&lt;</span>
-          <span className="logo-name">{personal.name}</span>
+          <span className="logo-name">
+            {personal.name.split('').map((ch, i) => (
+              <span key={i} style={{ color: ch === ' ' ? 'transparent' : logoColors[i % logoColors.length] }}>
+                {ch === ' ' ? '\u00A0' : ch}
+              </span>
+            ))}
+          </span>
           <span className="logo-bracket"> /&gt;</span>
         </a>
         <div className="header-right">

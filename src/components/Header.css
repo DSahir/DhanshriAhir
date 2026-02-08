@@ -40,10 +40,7 @@
 }
 
 .logo-name {
-  background: linear-gradient(135deg, var(--color-about), var(--color-projects), var(--color-experience));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  display: inline-flex;
 }
 
 .header-right {
