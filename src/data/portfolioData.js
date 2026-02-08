@@ -15,7 +15,7 @@ const portfolioData = {
     avatarUrl: '/profile-photo.jpg', // Place your photo at public/profile-photo.jpg
     bio: [
       'Hi there <span class="wave-emoji">\u{1F44B}</span>',
-      'I am a graduate student in <span class="bio-highlight-a">Computer Science</span> at the <span class="bio-highlight-a">University of Massachusetts Amherst</span>, and hold a B.Tech in Computer Engineering from the <span class="bio-highlight-a">College of Engineering, Pune</span>.',
+      'I am a <span class="bio-highlight-a">graduate</span> student in <span class="bio-highlight-a">Computer Science</span> at the <span class="bio-highlight-a">University of Massachusetts Amherst</span>, and hold a B.Tech in Computer Engineering from the <span class="bio-highlight-a">College of Engineering, Pune</span>.',
       'I previously worked at <span class="bio-highlight-b">Deutsche Bank</span> as an <span class="bio-highlight-b">Associate</span> for two years, and before that gained industry experience at <span class="bio-highlight-b">FinIQ Consulting</span> as a <span class="bio-highlight-b">Software Development Engineer</span> and <span class="bio-highlight-b">Intern</span>. My professional interests lie in <span class="bio-highlight-b">Machine Learning</span> and <span class="bio-highlight-b">Data Systems</span>, with a focus on building technologies that learn, adapt, and deliver meaningful insights.',
       'Outside of engineering, I enjoy exploring literature, painting, and traveling. I often find inspiration through books, blogs, and music.',
       'Please feel free to reach out if you would like to connect, collaborate, or discuss potential opportunities.',
@@ -35,23 +35,22 @@ const portfolioData = {
   education: [
     {
       degree: 'Masters in Computer Science',
-      institution: 'University of Massachusetts Amherst',
+      institution: 'University of Massachusetts Amherst, United States',
       year: 'Expected - May 2027',
       location: 'MA, USA',
       gpa: 'N/A',
       logo: '/logos/umass.png', // Place logo at public/logos/umass.png
       coursework: [
-        'Machine Learning',
-        'Systems for Data Science',
-        'Algorithms',
-        'Game Theory and Fairness',
+        'COMPSCI 589 Machine Learning',
+        'COMPSCI 532 Systems for Data Science',
+        'COMPSCI 515 Algorithms, Game Theory, and Fairness',
       ],
-      link: 'https://www.umass.edu/',
+      link: 'https://www.cics.umass.edu/',
     },
     {
       degree: 'College of Engineering, Pune',
       field: 'Bachelor of Technology in Computer Engineering',
-      minor: 'Minors in Financial Engineering',
+      minor: 'Minor in Mathematics with Specialization in Financial Engineering',
       institution: 'College of Engineering, Pune',
       year: 'Graduated : 2022',
       location: 'Pune, India',
@@ -60,8 +59,8 @@ const portfolioData = {
       coursework: [
         'Data Structures and Algorithms',
         'Algorithms and Complexity',
-        'Computer Networks',
         'Database Management Systems',
+        'Computer Networks',
         'Principles of Programming Languages',
         '… and many more',
       ],
@@ -137,13 +136,13 @@ const portfolioData = {
           ],
         },
         {
-          role: 'NLP-based Interview Analysis Framework',
+          role: 'Topic Mining From Interview Data',
           organization:
-            'Topic Modeling & Change Point Detection on Conversational Transcripts',
-          period: '2024',
+            'College of Engineering Pune, Capstone Project',
+          period: '2022',
           location: '',
-          logo: '/logos/nlp-research.png', // Place logo at public/logos/nlp-research.png
-          link: '',
+          logo: '/logos/coep.png', // Place logo at public/logos/nlp-research.png
+          link: 'https://drive.google.com/drive/folders/1revTJZGgwTT0bFH1q6d9kHMiHBbK1YS2',
           points: [
             'Led a 3-member team to build an NLP-based interview analysis framework, reducing subjective evaluation bias by applying probabilistic topic modeling (LDA) and topic change point detection on real-world interview transcripts.',
             'Analyzed 138 mock interviews (≈10.5 hours) from 69 MIT students, enabling large-scale conversational insights by performing end-to-end NLP preprocessing including tokenization, lemmatization, stopword removal, and transcript normalization.',
@@ -162,18 +161,19 @@ const portfolioData = {
           period: '2021',
           location: 'Pune, India',
           logo: '/logos/pune-startup-fest.png', // Place logo at public/logos/pune-startup-fest.png
-          link: '',
+          link: 'https://www.coeptech.ac.in/student-corner/student-clubs/pune-startup-fest/',
           points: [
-            'Organized the fest to facilitate ₹3.5 Cr funding for startups and 250+ student internships; managed budgeting, financial documentation, and permissions.',
+            'Organized the fest to facilitate ₹3.5 Cr funding for startups and 250+ student internships',
+            'Managed budgeting, financial documentation, and permission-related processes to ensure smooth and compliant fest operations',
           ],
         },
         {
           role: 'Core Member',
           organization: 'Bhau Institute of Innovation, Entrepreneurship and Leadership',
-          period: '',
+          period: '2021 - 2022',
           location: 'Pune, India',
-          logo: '/logos/biel.png', // Place logo at public/logos/biel.png
-          link: '',
+          logo: '/logos/bhau.png', // Place logo at public/logos/bhau.png
+          link: 'https://bhau.org/bhau-e-cell/',
           points: [
             'Increased student participation in entrepreneurship events by promoting startup opportunities and coordinating outreach for Vowels E-Cell.',
             'Executed startup workshops and networking events by coordinating with founders, mentors, and managing on-ground operations.',
@@ -188,9 +188,9 @@ const portfolioData = {
           role: 'Technical Writing Contributor',
           organization: 'GeeksforGeeks',
           period: '',
-          location: '',
+          location: 'India',
           logo: '/logos/gfg.png', // Place logo at public/logos/gfg.png
-          link: '',
+          link: 'https://www.geeksforgeeks.org/c/c-program-to-read-a-range-of-bytes-from-file-and-print-it-to-console/',
           points: [
             'Wrote and published technical articles on computer programming concepts, focusing on clear explanations, code examples, and best practices for learners at different levels.',
             'Achieved 40,000+ cumulative views from unique readers across published articles, demonstrating strong content reach and engagement in the developer community.',
@@ -198,11 +198,11 @@ const portfolioData = {
         },
         {
           role: 'Affiliated Basic Level Rifle Shooter',
-          organization: 'ABSA – Anjali Bhagwat Shooting Academy, Pune',
+          organization: 'ABSA – Anjali Bhagwat Shooting Academy',
           period: '',
           location: 'Pune, India',
           logo: '/logos/absa.png', // Place logo at public/logos/absa.png
-          link: '',
+          link: 'https://www.anjalibhagwat.com/projects',
           points: [
             'Trained at ABSA – Anjali Bhagwat Shooting Academy, Pune, in 10m air rifle basics, safety, posture, and precision shooting techniques under structured coaching.',
             'Practiced under the mentorship framework established by 3-time Olympian and former world no. 1 rifle shooter Anjali Bhagwat, focusing on discipline, consistency, and competition-oriented training.',
@@ -212,9 +212,9 @@ const portfolioData = {
           role: 'Volunteer Mentor',
           organization: 'Social Contribution',
           period: '',
-          location: '',
-          logo: '',
-          link: '',
+          location: 'Akola, India',
+          logo: '/logos/teach.png',
+          link: 'https://drive.google.com/drive/folders/1revTJZGgwTT0bFH1q6d9kHMiHBbK1YS2',
           points: [
             'Mentored and taught 50+ students mathematics and basic computer skills at a tribal Ashram school during semester breaks, focusing on building foundational numeracy and digital literacy.',
           ],
