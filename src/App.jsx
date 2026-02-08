@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from './components/ThemeContext';
 import MouseGradient from './components/MouseGradient';
+import portfolioData from './data/portfolioData';
 import Header from './components/Header';
 import About from './components/About';
 import Education from './components/Education';
@@ -8,6 +9,8 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import './App.css';
+
+const { personal } = portfolioData;
 
 function App() {
   const [activeSection, setActiveSection] = useState('About');
@@ -68,7 +71,7 @@ function App() {
           <Contact />
         </main>
         <footer className="footer">
-          <p>&copy; 2026 Dhanshri Ahir. All rights reserved.</p>
+          <p>&copy; 2026 {personal.name}. All rights reserved.</p>
         </footer>
       </div>
     </ThemeProvider>

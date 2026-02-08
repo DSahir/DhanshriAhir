@@ -1,43 +1,7 @@
+import portfolioData from '../data/portfolioData';
 import './Section.css';
 
-const projectsData = [
-  {
-    title: 'Portfolio Website',
-    body: 'A modern, responsive personal portfolio built with React and Vite. Features smooth scroll navigation, dark/light theme toggle, collapsible experience sections, and a clean card-based layout to showcase projects and skills.',
-    tech: ['React', 'Vite', 'CSS3', 'JavaScript'],
-    link: 'https://github.com/DhanshriAhir/portfolio',
-  },
-  {
-    title: 'Task Manager App',
-    body: 'A full-stack task management application with user authentication, real-time updates via WebSockets, and drag-and-drop Kanban boards. Users can create projects, assign tasks, set deadlines, and track progress with visual analytics.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'JWT'],
-    link: 'https://github.com/DhanshriAhir/task-manager',
-  },
-  {
-    title: 'Weather Dashboard',
-    body: 'An interactive weather dashboard that displays current conditions, 7-day forecasts, and historical trends using the OpenWeatherMap API. Includes geolocation support, city search with autocomplete, and dynamic weather-themed backgrounds.',
-    tech: ['JavaScript', 'REST API', 'Chart.js', 'CSS3'],
-    link: 'https://github.com/DhanshriAhir/weather-dashboard',
-  },
-  {
-    title: 'AI Crop Disease Detector',
-    body: 'A computer vision application that identifies crop diseases from leaf images using a fine-tuned ResNet-50 model. Built during Smart India Hackathon 2023, it supports 15 disease classes across 5 crop types with 94% accuracy.',
-    tech: ['Python', 'PyTorch', 'Flask', 'OpenCV', 'React'],
-    link: 'https://github.com/DhanshriAhir/crop-disease-detector',
-  },
-  {
-    title: 'E-Commerce Platform',
-    body: 'A fully functional e-commerce platform with product catalog, shopping cart, Stripe payment integration, order tracking, and an admin dashboard for inventory management. Features server-side rendering for optimal SEO performance.',
-    tech: ['Next.js', 'PostgreSQL', 'Prisma', 'Stripe', 'Tailwind CSS'],
-    link: 'https://github.com/DhanshriAhir/ecommerce-platform',
-  },
-  {
-    title: 'Real-Time Chat Application',
-    body: 'A real-time messaging application supporting private and group chats, file sharing, message search, and read receipts. Built with a microservices architecture using Docker containers for easy deployment and scaling.',
-    tech: ['React', 'Node.js', 'Socket.io', 'Redis', 'Docker'],
-    link: 'https://github.com/DhanshriAhir/realtime-chat',
-  },
-];
+const { projects } = portfolioData;
 
 function Projects() {
   return (
@@ -45,7 +9,7 @@ function Projects() {
       <div className="section-container">
         <h2 className="section-title title-projects">Projects</h2>
         <div className="projects-grid">
-          {projectsData.map((project, index) => (
+          {projects.map((project, index) => (
             <div key={index} className="card project-card">
               <div className="project-card-header">
                 <h3>{project.title}</h3>

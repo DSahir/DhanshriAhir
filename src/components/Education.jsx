@@ -1,3 +1,4 @@
+import portfolioData from '../data/portfolioData';
 import './Section.css';
 
 const educationData = [
@@ -18,6 +19,7 @@ const educationData = [
     link: 'https://example.edu',
   },
 ];
+const { education } = portfolioData;
 
 function Education() {
   return (
@@ -25,7 +27,7 @@ function Education() {
       <div className="section-container">
         <h2 className="section-title title-education">Education</h2>
         <div className="timeline">
-          {educationData.map((item, index) => (
+          {education.map((item, index) => (
             <div key={index} className="timeline-item">
               <div className="timeline-dot" />
               <div className="timeline-content card edu-card">

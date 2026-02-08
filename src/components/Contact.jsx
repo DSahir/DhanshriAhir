@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import portfolioData from '../data/portfolioData';
 import './Section.css';
+
+const { personal } = portfolioData;
 
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -26,11 +29,11 @@ function Contact() {
             <div className="contact-details">
               <div className="contact-detail-item">
                 <span className="contact-icon">&#9993;</span>
-                <span>dhanshri@example.com</span>
+                <span>{personal.email}</span>
               </div>
               <div className="contact-detail-item">
                 <span className="contact-icon">&#128205;</span>
-                <span>India</span>
+                <span>{personal.location}</span>
               </div>
             </div>
           </div>

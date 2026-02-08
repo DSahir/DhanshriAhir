@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from './ThemeContext';
+import portfolioData from '../data/portfolioData';
 import './Header.css';
 
 const navItems = [
@@ -9,6 +10,7 @@ const navItems = [
   { name: 'Projects', colorClass: 'nav-projects' },
   { name: 'Contact', colorClass: 'nav-contact' },
 ];
+const { navItems, personal } = portfolioData;
 
 function Header({ activeSection, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +25,7 @@ function Header({ activeSection, onNavigate }) {
     <header className="header">
       <div className="header-container">
         <a className="header-logo" href="#about" onClick={() => handleClick('About')}>
-          Dhanshri Ahir
+          {personal.name}
         </a>
         <div className="header-right">
           <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
