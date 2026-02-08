@@ -3,6 +3,8 @@ import { useTheme } from './ThemeContext';
 import portfolioData from '../data/portfolioData';
 import './Header.css';
 
+const { personal } = portfolioData;
+
 const navItems = [
   { name: 'About', colorClass: 'nav-about' },
   { name: 'Education', colorClass: 'nav-education' },
@@ -10,7 +12,6 @@ const navItems = [
   { name: 'Projects', colorClass: 'nav-projects' },
   { name: 'Contact', colorClass: 'nav-contact' },
 ];
-const { navItems, personal } = portfolioData;
 
 function Header({ activeSection, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false);

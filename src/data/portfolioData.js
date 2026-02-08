@@ -40,6 +40,7 @@ const portfolioData = {
       year: '2020 - 2024',
       description:
         'Focused on software engineering, data structures, and algorithms.',
+      link: 'https://example.edu', // <-- Replace with your university URL
     },
     {
       degree: 'Higher Secondary (12th)',
@@ -48,6 +49,7 @@ const portfolioData = {
       year: '2018 - 2020',
       description:
         'Completed higher secondary education with a focus on science and mathematics.',
+      link: 'https://example.edu', // <-- Replace with your school URL
     },
   ],
 

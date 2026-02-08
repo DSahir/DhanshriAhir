@@ -1,24 +1,6 @@
 import portfolioData from '../data/portfolioData';
 import './Section.css';
 
-const educationData = [
-  {
-    degree: 'Bachelor of Technology',
-    field: 'Computer Science & Engineering',
-    institution: 'University Name',
-    year: '2020 - 2024',
-    description: 'Focused on software engineering, data structures, and algorithms.',
-    link: 'https://example.edu',
-  },
-  {
-    degree: 'Higher Secondary (12th)',
-    field: 'Science',
-    institution: 'School Name',
-    year: '2018 - 2020',
-    description: 'Completed higher secondary education with a focus on science and mathematics.',
-    link: 'https://example.edu',
-  },
-];
 const { education } = portfolioData;
 
 function Education() {

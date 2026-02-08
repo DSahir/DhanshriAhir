@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
+import portfolioData from '../data/portfolioData';
 import './Section.css';
+
+const { personal } = portfolioData;
 
 const phrases = ['a Frontend Designer', 'a Masters Student', 'looking for a Job'];
 
@@ -41,10 +44,6 @@ function TypingAnimation() {
     </div>
   );
 }
-import portfolioData from '../data/portfolioData';
-import './Section.css';
-
-const { personal } = portfolioData;
 
 function About() {
   return (
@@ -58,7 +57,7 @@ function About() {
               src={personal.avatarUrl}
               alt={personal.name}
             />
-            <p className="avatar-email">dhanshri@example.com</p>
+            <p className="avatar-email">{personal.email}</p>
             <p className="avatar-degree">MS in Computer Science</p>
             <p className="avatar-degree-secondary">BTech in Computer Engineering</p>
           </div>
