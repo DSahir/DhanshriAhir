@@ -309,6 +309,35 @@
   color: var(--color-education);
 }
 
+/* Shared logo + title row for education and experience cards */
+.card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+/* Experience card (needs position for link icon) */
+.exp-card {
+  position: relative;
+}
+
+.section-experience .institution-link:hover {
+  color: var(--color-experience);
+  border-color: var(--color-experience);
+  background: var(--color-experience-bg);
+}
+
 .timeline-content h4 {
   font-size: 0.95rem;
   color: var(--text-secondary);

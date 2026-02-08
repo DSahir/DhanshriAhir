@@ -39,6 +39,7 @@ const portfolioData = {
       year: 'Expected - May 2027',
       location: 'MA, USA',
       gpa: 'N/A',
+      logo: '/logos/umass.png', // Place logo at public/logos/umass.png
       coursework: [
         'Machine Learning',
         'Systems for Data Science',
@@ -55,6 +56,7 @@ const portfolioData = {
       year: 'Graduated : 2022',
       location: 'Pune, India',
       gpa: '8.79/10',
+      logo: '/logos/coep.png', // Place logo at public/logos/coep.png
       coursework: [
         'Data Structures and Algorithms',
         'Algorithms and Complexity',
@@ -75,20 +77,24 @@ const portfolioData = {
       title: 'Work Experience',
       items: [
         {
-          role: 'Software Developer Intern',
-          organization: 'TechCorp Solutions Pvt. Ltd.', // <-- Replace
+          role: 'Associate',
+          organization: 'Deutsche Bank',
           period: 'Jan 2024 - Jun 2024',
+          logo: '/logos/deutsche-bank.png', // Place logo at public/logos/deutsche-bank.png
+          link: 'https://www.db.com/index?language_id=1&kid=sl.redirect-en.shortcut',
           points: [
-            'Developed and maintained RESTful APIs using Node.js and Express for an internal dashboard serving 500+ users.',
-            'Built reusable React components that reduced frontend development time by 30%.',
-            'Collaborated with a cross-functional team of 8 engineers using Agile/Scrum methodology.',
-            'Wrote unit and integration tests achieving 85% code coverage with Jest and React Testing Library.',
+            'Boosted GPDP data pipeline performance by 60%+ and cut storage usage by ~40% by engineering Spring Boot microservices and optimizing complex Oracle PL/SQL with parallel execution and efficient batching.',
+            'Processed 8GB+ structured datasets and improved overall system efficiency by ~30% by building Spark transformations, Hadoop workflows, and scalable ingestion tooling.',
+            'Improved reliability across 5+ microservices by implementing distributed tracing, structured logging, Camel-based orchestration, and Splunk monitoring, accelerating production issue detection and resolution.',
+            'Star performer in internal data ingestion hackathon.',
           ],
         },
         {
           role: 'Frontend Developer Intern',
-          organization: 'WebStudio Digital Agency', // <-- Replace
+          organization: 'WebStudio Digital Agency',
           period: 'Jun 2023 - Dec 2023',
+          logo: '/logos/webstudio.png', // Place logo at public/logos/webstudio.png
+          link: '',
           points: [
             'Designed and implemented responsive landing pages for 5+ client projects using React and Tailwind CSS.',
             'Optimized page load performance by 40% through lazy loading and image compression.',
@@ -102,8 +108,10 @@ const portfolioData = {
       items: [
         {
           role: 'Undergraduate Research Assistant',
-          organization: 'Machine Learning Lab, University of Technology', // <-- Replace
+          organization: 'Machine Learning Lab, University of Technology',
           period: 'Aug 2023 - May 2024',
+          logo: '/logos/research-lab.png', // Place logo at public/logos/research-lab.png
+          link: '',
           points: [
             'Conducted research on natural language processing techniques for sentiment analysis of social media data.',
             'Implemented transformer-based models using PyTorch, achieving 92% classification accuracy on benchmark datasets.',
@@ -119,6 +127,8 @@ const portfolioData = {
           role: 'Smart India Hackathon 2023 - Finalist',
           organization: 'Ministry of Education, Government of India',
           period: 'Dec 2023',
+          logo: '/logos/sih.png', // Place logo at public/logos/sih.png
+          link: '',
           points: [
             'Led a team of 6 to develop an AI-powered crop disease detection system using computer vision.',
             'Achieved top 10 finish among 500+ competing teams nationally.',
@@ -126,8 +136,10 @@ const portfolioData = {
         },
         {
           role: "Dean's List - Academic Excellence",
-          organization: 'University of Technology', // <-- Replace
+          organization: 'University of Technology',
           period: '2021 - 2024',
+          logo: '',
+          link: '',
           points: [
             'Maintained a CGPA of 9.2/10 across all semesters.',
             'Awarded merit scholarship for outstanding academic performance.',
@@ -143,10 +155,12 @@ const portfolioData = {
           organization:
             'International Journal of Computational Linguistics, Vol. 12, Issue 3',
           period: '2024',
+          logo: '',
+          link: '',
           points: [
             'Proposed a hybrid BERT-LSTM architecture for multi-label sentiment classification.',
             'Demonstrated 4.5% improvement over baseline models on the SemEval-2023 dataset.',
-            'DOI: 10.xxxx/sample-doi-12345', // <-- Replace with real DOI
+            'DOI: 10.xxxx/sample-doi-12345',
           ],
         },
         {
@@ -154,6 +168,8 @@ const portfolioData = {
           organization:
             'IEEE Conference on Embedded Systems, Proceedings 2024',
           period: '2024',
+          logo: '',
+          link: '',
           points: [
             'Reviewed 50+ papers on lightweight CNN architectures for resource-constrained devices.',
             'Provided a comparative analysis of YOLOv8, EfficientDet, and MobileNet-SSD on Raspberry Pi.',
@@ -168,6 +184,8 @@ const portfolioData = {
           role: 'Technical Lead',
           organization: 'Google Developer Student Club (GDSC)',
           period: '2023 - 2024',
+          logo: '/logos/gdsc.png', // Place logo at public/logos/gdsc.png
+          link: '',
           points: [
             'Organized 10+ technical workshops on web development, cloud computing, and machine learning.',
             'Mentored 30+ junior developers through hands-on coding sessions and project guidance.',
@@ -178,6 +196,8 @@ const portfolioData = {
           role: 'Core Committee Member',
           organization: 'ACM Student Chapter',
           period: '2022 - 2024',
+          logo: '/logos/acm.png', // Place logo at public/logos/acm.png
+          link: '',
           points: [
             'Organized competitive programming contests with 200+ participants each semester.',
             'Conducted weekly algorithm study groups to prepare members for ICPC regionals.',

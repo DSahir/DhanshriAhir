@@ -52,9 +52,33 @@ function Experience() {
                   {category.items.map((item, index) => (
                     <div key={index} className="timeline-item">
                       <div className="timeline-dot" />
-                      <div className="timeline-content card">
+                      <div className="timeline-content card exp-card">
+                        {item.link && (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="institution-link"
+                            title={`Visit ${item.organization}`}
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                              <polyline points="15 3 21 3 21 9" />
+                              <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                          </a>
+                        )}
                         <span className="timeline-year">{item.period}</span>
-                        <h3>{item.role}</h3>
+                        <div className="card-title-row">
+                          {item.logo && (
+                            <img
+                              src={item.logo}
+                              alt={item.organization}
+                              className="card-logo"
+                            />
+                          )}
+                          <h3>{item.role}</h3>
+                        </div>
                         <p className="timeline-institution">{item.organization}</p>
                         <ul className="experience-list">
                           {item.points.map((point, i) => (
