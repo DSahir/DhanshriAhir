@@ -12,17 +12,14 @@ const portfolioData = {
   personal: {
     name: 'Dhanshri Ahir',
     title: 'Developer',
-    avatarUrl:
-      'https://api.dicebear.com/7.x/avataaars/svg?seed=Dhanshri&backgroundColor=e94560',
-    // Replace the avatar URL above with a link to your actual photo, e.g.:
-    // avatarUrl: '/profile-photo.jpg',
+    avatarUrl: '/profile-photo.jpg', // Place your photo at public/profile-photo.jpg
     bio: [
       "Hello! I'm <strong>Dhanshri Ahir</strong>, a passionate developer who loves building web applications and solving problems through code.",
       'I enjoy working with modern technologies and am always eager to learn new skills. My goal is to create impactful software that makes a difference.',
     ],
     email: 'dahir@umass.edu',
     location: 'Massachusetts, USA',
-    resumeUrl: '#', // Replace with your actual resume file URL
+    resumeUrl: '/resume.pdf', // Place your resume at public/resume.pdf
     socialLinks: {
       linkedin: 'https://linkedin.com/in/dhanshri-ahir',
       github: 'https://github.com/DSAhir',
