@@ -3,11 +3,26 @@ import './Section.css';
 
 const { education } = portfolioData;
 
+const eduEmojis = ['🎓', '📚', '🔬', '✏️', '💡'];
+
 function Education() {
   return (
     <section id="education" className="section section-education">
       <div className="section-container">
-        <h2 className="section-title title-education">Education</h2>
+        <h2 className="section-title title-education">
+          Education
+          <span className="edu-emojis">
+            {eduEmojis.map((emoji, i) => (
+              <span
+                key={i}
+                className="edu-emoji-float"
+                style={{ animationDelay: `${i * 0.4}s` }}
+              >
+                {emoji}
+              </span>
+            ))}
+          </span>
+        </h2>
         <div className="timeline">
           {education.map((item, index) => (
             <div key={index} className="timeline-item">
@@ -28,11 +43,42 @@ function Education() {
                     </svg>
                   </a>
                 )}
-                <span className="timeline-year">{item.year}</span>
-                <h3>{item.degree}</h3>
-                <h4>{item.field}</h4>
-                <p className="timeline-institution">{item.institution}</p>
-                <p>{item.description}</p>
+                <div className="edu-card-layout">
+                  <div className="edu-card-main">
+                    <span className="timeline-year">{item.year}</span>
+                    <h3>{item.degree}</h3>
+                    {item.field && <h4>{item.field}</h4>}
+                    <p className="timeline-institution">{item.institution}</p>
+                    {item.description && <p>{item.description}</p>}
+                    {item.coursework && (
+                      <div className="edu-coursework">
+                        <p className="edu-coursework-label">Coursework:</p>
+                        <ul className="edu-coursework-list">
+                          {item.coursework.map((course, i) => (
+                            <li key={i}>{course}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                  {(item.location || item.gpa) && (
+                    <div className="edu-card-side">
+                      {item.location && (
+                        <div className="edu-side-item">
+                          <span className="edu-side-icon">📍</span>
+                          <span className="edu-side-text">{item.location}</span>
+                        </div>
+                      )}
+                      {item.gpa && (
+                        <div className="edu-side-item">
+                          <span className="edu-side-icon">📊</span>
+                          <span className="edu-side-label">GPA</span>
+                          <span className="edu-side-text">{item.gpa}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           ))}

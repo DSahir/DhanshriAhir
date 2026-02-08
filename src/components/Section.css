@@ -327,6 +327,102 @@
   position: relative;
 }
 
+/* Education card two-column layout */
+.edu-card-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.edu-card-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.edu-card-side {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+  padding-top: 4px;
+}
+
+.edu-side-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.edu-side-icon {
+  font-size: 1rem;
+}
+
+.edu-side-label {
+  font-weight: 600;
+  color: var(--color-education);
+  font-size: 0.8rem;
+}
+
+.edu-side-text {
+  font-weight: 500;
+}
+
+/* Coursework */
+.edu-coursework {
+  margin-top: 10px;
+}
+
+.edu-coursework-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-education);
+  margin-bottom: 6px;
+}
+
+.edu-coursework-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.edu-coursework-list li {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  background: rgba(103, 232, 249, 0.08);
+  color: var(--color-education);
+  border-radius: 8px;
+  border: 1px solid rgba(103, 232, 249, 0.15);
+}
+
+/* Floating education emojis */
+.edu-emojis {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+.edu-emoji-float {
+  display: inline-block;
+  font-size: 1.2rem;
+  animation: eduFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes eduFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(5deg); }
+  50% { transform: translateY(-2px) rotate(-3deg); }
+  75% { transform: translateY(-8px) rotate(3deg); }
+}
+
 .institution-link {
   position: absolute;
   top: 16px;
@@ -717,6 +813,16 @@
 
   .about-actions {
     justify-content: center;
+  }
+
+  .edu-card-layout {
+    flex-direction: column;
+  }
+
+  .edu-card-side {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
   }
 
   .contact-wrapper {

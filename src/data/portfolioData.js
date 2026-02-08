@@ -34,22 +34,27 @@ const portfolioData = {
   // ---------------------------------------------------------------------------
   education: [
     {
+      degree: 'Masters in Computer Science',
+      institution: 'University of Massachusetts Amherst',
+      year: 'Expected - May 2027',
+      location: 'MA, USA',
+      gpa: 'N/A',
+      coursework: [
+        'Machine Learning',
+        'Systems for Data Science',
+        'Algorithms',
+        'Game Theory and Fairness',
+      ],
+      link: 'https://www.umass.edu/',
+    },
+    {
       degree: 'Bachelor of Technology',
       field: 'Computer Science & Engineering',
-      institution: 'College Of Engineering, Pune', // <-- Replace with your actual university
+      institution: 'College Of Engineering, Pune',
       year: '2018 - 2022',
       description:
         'Focused on software engineering, data structures, and algorithms.',
-      link: 'https://www.coeptech.ac.in/', // <-- Replace with your university URL
-    },
-    {
-      degree: 'Higher Secondary (12th)',
-      field: 'Science',
-      institution: 'School Name', // <-- Replace with your actual school
-      year: '2018 - 2020',
-      description:
-        'Completed higher secondary education with a focus on science and mathematics.',
-      link: 'https://example.edu', // <-- Replace with your school URL
+      link: 'https://www.coeptech.ac.in/',
     },
   ],
 
