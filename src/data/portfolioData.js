@@ -157,28 +157,66 @@ const portfolioData = {
       title: 'Student Organizations',
       items: [
         {
-          role: 'Technical Lead',
-          organization: 'Google Developer Student Club (GDSC)',
-          period: '2023 - 2024',
-          location: '',
-          logo: '/logos/gdsc.png', // Place logo at public/logos/gdsc.png
+          role: 'Accounts and Documentation Head',
+          organization: 'Pune Startup Fest \'21',
+          period: '2021',
+          location: 'Pune, India',
+          logo: '/logos/pune-startup-fest.png', // Place logo at public/logos/pune-startup-fest.png
           link: '',
           points: [
-            'Organized 10+ technical workshops on web development, cloud computing, and machine learning.',
-            'Mentored 30+ junior developers through hands-on coding sessions and project guidance.',
-            "Led the club's participation in Google Solution Challenge 2024.",
+            'Organized the fest to facilitate ₹3.5 Cr funding for startups and 250+ student internships; managed budgeting, financial documentation, and permissions.',
           ],
         },
         {
-          role: 'Core Committee Member',
-          organization: 'ACM Student Chapter',
-          period: '2022 - 2024',
-          location: '',
-          logo: '/logos/acm.png', // Place logo at public/logos/acm.png
+          role: 'Core Member',
+          organization: 'Bhau Institute of Innovation, Entrepreneurship and Leadership',
+          period: '',
+          location: 'Pune, India',
+          logo: '/logos/biel.png', // Place logo at public/logos/biel.png
           link: '',
           points: [
-            'Organized competitive programming contests with 200+ participants each semester.',
-            'Conducted weekly algorithm study groups to prepare members for ICPC regionals.',
+            'Increased student participation in entrepreneurship events by promoting startup opportunities and coordinating outreach for Vowels E-Cell.',
+            'Executed startup workshops and networking events by coordinating with founders, mentors, and managing on-ground operations.',
+          ],
+        },
+      ],
+    },
+    {
+      title: 'Activities and Achievements',
+      items: [
+        {
+          role: 'Technical Writing Contributor',
+          organization: 'GeeksforGeeks',
+          period: '',
+          location: '',
+          logo: '/logos/gfg.png', // Place logo at public/logos/gfg.png
+          link: '',
+          points: [
+            'Wrote and published technical articles on computer programming concepts, focusing on clear explanations, code examples, and best practices for learners at different levels.',
+            'Achieved 40,000+ cumulative views from unique readers across published articles, demonstrating strong content reach and engagement in the developer community.',
+          ],
+        },
+        {
+          role: 'Affiliated Basic Level Rifle Shooter',
+          organization: 'ABSA – Anjali Bhagwat Shooting Academy, Pune',
+          period: '',
+          location: 'Pune, India',
+          logo: '/logos/absa.png', // Place logo at public/logos/absa.png
+          link: '',
+          points: [
+            'Trained at ABSA – Anjali Bhagwat Shooting Academy, Pune, in 10m air rifle basics, safety, posture, and precision shooting techniques under structured coaching.',
+            'Practiced under the mentorship framework established by 3-time Olympian and former world no. 1 rifle shooter Anjali Bhagwat, focusing on discipline, consistency, and competition-oriented training.',
+          ],
+        },
+        {
+          role: 'Volunteer Mentor',
+          organization: 'Social Contribution',
+          period: '',
+          location: '',
+          logo: '',
+          link: '',
+          points: [
+            'Mentored and taught 50+ students mathematics and basic computer skills at a tribal Ashram school during semester breaks, focusing on building foundational numeracy and digital literacy.',
           ],
         },
       ],
