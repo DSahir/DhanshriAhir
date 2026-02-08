@@ -20,11 +20,7 @@ const portfolioData = {
       "Hello! I'm <strong>Dhanshri Ahir</strong>, a passionate developer who loves building web applications and solving problems through code.",
       'I enjoy working with modern technologies and am always eager to learn new skills. My goal is to create impactful software that makes a difference.',
     ],
-<<<<<<< HEAD
-    email: 'dsahir511@gmail.com',
-=======
     email: 'dahir@umass.edu',
->>>>>>> 0680a08 (Changes mail)
     location: 'Massachusetts, USA',
     resumeUrl: '#', // Replace with your actual resume file URL
     socialLinks: {
