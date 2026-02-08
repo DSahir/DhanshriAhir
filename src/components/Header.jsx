@@ -18,6 +18,7 @@ const navItems = [
   { name: 'Education', colorClass: 'nav-education' },
   { name: 'Experience', colorClass: 'nav-experience' },
   { name: 'Projects', colorClass: 'nav-projects' },
+  { name: 'Certificates', colorClass: 'nav-certificates' },
   { name: 'Contact', colorClass: 'nav-contact' },
 ];
 

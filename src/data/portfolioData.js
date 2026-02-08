@@ -266,9 +266,17 @@ const portfolioData = {
   ],
 
   // ---------------------------------------------------------------------------
+  // CERTIFICATES - Used in Certificates.jsx
+  // ---------------------------------------------------------------------------
+  certificates: [
+    { name: 'Certificate Name 1', link: '' }, // <-- Replace with your certificates
+    { name: 'Certificate Name 2', link: '' },
+  ],
+
+  // ---------------------------------------------------------------------------
   // NAVIGATION - Used in Header.jsx
   // ---------------------------------------------------------------------------
-  navItems: ['About', 'Education', 'Experience', 'Projects', 'Contact'],
+  navItems: ['About', 'Education', 'Experience', 'Projects', 'Certificates', 'Contact'],
 };
 
 export default portfolioData;

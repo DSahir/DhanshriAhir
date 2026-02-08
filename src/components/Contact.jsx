@@ -21,7 +21,17 @@ function Contact() {
   return (
     <section id="contact" className="section section-contact">
       <div className="section-container">
-        <h2 className="section-title title-contact">Contact</h2>
+        <h2 className="section-title title-contact">
+          <span className="section-emojis">
+            <span className="section-emoji-float" style={{ animationDelay: '0s' }}>📬</span>
+            <span className="section-emoji-float" style={{ animationDelay: '0.4s' }}>✉️</span>
+          </span>
+          Contact
+          <span className="section-emojis">
+            <span className="section-emoji-float" style={{ animationDelay: '0.8s' }}>🤝</span>
+            <span className="section-emoji-float" style={{ animationDelay: '1.2s' }}>💬</span>
+          </span>
+        </h2>
         <div className="contact-wrapper">
           <div className="contact-info">
             <h3>Get in Touch</h3>

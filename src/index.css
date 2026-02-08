@@ -45,6 +45,8 @@ html {
   --color-projects-bg: rgba(244, 114, 182, 0.06);
   --color-contact: #63d0a5;
   --color-contact-bg: rgba(99, 208, 165, 0.06);
+  --color-certificates: #facc15;
+  --color-certificates-bg: rgba(250, 204, 21, 0.06);
 
 }
 
@@ -82,6 +84,8 @@ html {
   --color-projects-bg: rgba(219, 39, 119, 0.06);
   --color-contact: #059669;
   --color-contact-bg: rgba(5, 150, 105, 0.06);
+  --color-certificates: #ca8a04;
+  --color-certificates-bg: rgba(202, 138, 4, 0.06);
 
 }
 

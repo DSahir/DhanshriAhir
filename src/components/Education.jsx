@@ -3,24 +3,19 @@ import './Section.css';
 
 const { education } = portfolioData;
 
-const eduEmojis = ['🎓', '📚', '🔬', '✏️', '💡'];
-
 function Education() {
   return (
     <section id="education" className="section section-education">
       <div className="section-container">
         <h2 className="section-title title-education">
+          <span className="section-emojis">
+            <span className="section-emoji-float" style={{ animationDelay: '0s' }}>🎓</span>
+            <span className="section-emoji-float" style={{ animationDelay: '0.4s' }}>📚</span>
+          </span>
           Education
-          <span className="edu-emojis">
-            {eduEmojis.map((emoji, i) => (
-              <span
-                key={i}
-                className="edu-emoji-float"
-                style={{ animationDelay: `${i * 0.4}s` }}
-              >
-                {emoji}
-              </span>
-            ))}
+          <span className="section-emojis">
+            <span className="section-emoji-float" style={{ animationDelay: '0.8s' }}>🔬</span>
+            <span className="section-emoji-float" style={{ animationDelay: '1.2s' }}>💡</span>
           </span>
         </h2>
         <div className="timeline">
