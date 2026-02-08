@@ -338,6 +338,44 @@
   background: var(--color-experience-bg);
 }
 
+/* Experience card two-column layout */
+.exp-card-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.exp-card-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.exp-card-side {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+  padding-top: 4px;
+}
+
+.exp-side-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.exp-side-icon {
+  font-size: 1rem;
+}
+
+.exp-side-text {
+  font-weight: 500;
+}
+
 .timeline-content h4 {
   font-size: 0.95rem;
   color: var(--text-secondary);
@@ -858,6 +896,16 @@
   }
 
   .edu-card-side {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .exp-card-layout {
+    flex-direction: column;
+  }
+
+  .exp-card-side {
     flex-direction: row;
     align-items: center;
     gap: 16px;

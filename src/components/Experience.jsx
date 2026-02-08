@@ -68,23 +68,35 @@ function Experience() {
                             </svg>
                           </a>
                         )}
-                        <span className="timeline-year">{item.period}</span>
-                        <div className="card-title-row">
-                          {item.logo && (
-                            <img
-                              src={item.logo}
-                              alt={item.organization}
-                              className="card-logo"
-                            />
+                        <div className="exp-card-layout">
+                          <div className="exp-card-main">
+                            <span className="timeline-year">{item.period}</span>
+                            <div className="card-title-row">
+                              {item.logo && (
+                                <img
+                                  src={item.logo}
+                                  alt={item.organization}
+                                  className="card-logo"
+                                />
+                              )}
+                              <h3>{item.role}</h3>
+                            </div>
+                            <p className="timeline-institution">{item.organization}</p>
+                            <ul className="experience-list">
+                              {item.points.map((point, i) => (
+                                <li key={i}>{point}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          {item.location && (
+                            <div className="exp-card-side">
+                              <div className="exp-side-item">
+                                <span className="exp-side-icon">📍</span>
+                                <span className="exp-side-text">{item.location}</span>
+                              </div>
+                            </div>
                           )}
-                          <h3>{item.role}</h3>
                         </div>
-                        <p className="timeline-institution">{item.organization}</p>
-                        <ul className="experience-list">
-                          {item.points.map((point, i) => (
-                            <li key={i}>{point}</li>
-                          ))}
-                        </ul>
                       </div>
                     </div>
                   ))}

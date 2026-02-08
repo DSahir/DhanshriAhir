@@ -80,6 +80,7 @@ const portfolioData = {
           role: 'Associate',
           organization: 'Deutsche Bank',
           period: 'Jan 2024 - Jun 2024',
+          location: 'Pune, India',
           logo: '/logos/deutsche-bank.png', // Place logo at public/logos/deutsche-bank.png
           link: 'https://www.db.com/index?language_id=1&kid=sl.redirect-en.shortcut',
           points: [
@@ -90,15 +91,27 @@ const portfolioData = {
           ],
         },
         {
-          role: 'Frontend Developer Intern',
-          organization: 'WebStudio Digital Agency',
-          period: 'Jun 2023 - Dec 2023',
-          logo: '/logos/webstudio.png', // Place logo at public/logos/webstudio.png
+          role: 'Software Development Engineer',
+          organization: 'FinIQ Consulting',
+          period: 'July 2022 - Dec 2022',
+          location: 'Pune, India',
+          logo: '/logos/finiq.png', // Place logo at public/logos/finiq.png
           link: '',
           points: [
-            'Designed and implemented responsive landing pages for 5+ client projects using React and Tailwind CSS.',
-            'Optimized page load performance by 40% through lazy loading and image compression.',
-            'Integrated third-party APIs including Stripe payments and Google Maps.',
+            'Improved trade message processing performance by 80% by integrating Angular-based front-end systems with a threaded staging table and implementing FIX Protocol solutions in C++ for FX Derivatives and Structured Products trading workflows.',
+            'Enhanced reliability and scalability of trading platforms serving 10+ global banking clients by building C#/PL-SQL modules handling XML via REST (~200 requests/min), streamlining dynamic FIX messaging and email-based pricing systems, and contributing to high-level order workflow system design.',
+          ],
+        },
+        {
+          role: 'Internship',
+          organization: 'FinIQ Consulting',
+          period: 'Jan 2022 - June 2022',
+          location: 'Pune, India',
+          logo: '/logos/finiq.png', // Place logo at public/logos/finiq.png
+          link: '',
+          points: [
+            'Increased user engagement by 20% and reduced navigation time by 30% by redesigning the company\'s web application using React Hooks and Material UI to build dynamic, user-centric interfaces.',
+            'Enhanced platform usability by developing reusable dynamic templates (5 pages each) with advanced search autocomplete, related suggestions, and custom theming, delivering faster and more intuitive navigation.',
           ],
         },
       ],
@@ -110,6 +123,7 @@ const portfolioData = {
           role: 'Undergraduate Research Assistant',
           organization: 'Machine Learning Lab, University of Technology',
           period: 'Aug 2023 - May 2024',
+          location: '',
           logo: '/logos/research-lab.png', // Place logo at public/logos/research-lab.png
           link: '',
           points: [
@@ -127,6 +141,7 @@ const portfolioData = {
           role: 'Smart India Hackathon 2023 - Finalist',
           organization: 'Ministry of Education, Government of India',
           period: 'Dec 2023',
+          location: 'India',
           logo: '/logos/sih.png', // Place logo at public/logos/sih.png
           link: '',
           points: [
@@ -138,6 +153,7 @@ const portfolioData = {
           role: "Dean's List - Academic Excellence",
           organization: 'University of Technology',
           period: '2021 - 2024',
+          location: '',
           logo: '',
           link: '',
           points: [
@@ -155,6 +171,7 @@ const portfolioData = {
           organization:
             'International Journal of Computational Linguistics, Vol. 12, Issue 3',
           period: '2024',
+          location: '',
           logo: '',
           link: '',
           points: [
@@ -168,6 +185,7 @@ const portfolioData = {
           organization:
             'IEEE Conference on Embedded Systems, Proceedings 2024',
           period: '2024',
+          location: '',
           logo: '',
           link: '',
           points: [
@@ -184,6 +202,7 @@ const portfolioData = {
           role: 'Technical Lead',
           organization: 'Google Developer Student Club (GDSC)',
           period: '2023 - 2024',
+          location: '',
           logo: '/logos/gdsc.png', // Place logo at public/logos/gdsc.png
           link: '',
           points: [
@@ -196,6 +215,7 @@ const portfolioData = {
           role: 'Core Committee Member',
           organization: 'ACM Student Chapter',
           period: '2022 - 2024',
+          location: '',
           logo: '/logos/acm.png', // Place logo at public/logos/acm.png
           link: '',
           points: [
