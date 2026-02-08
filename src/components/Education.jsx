@@ -48,7 +48,10 @@ function Education() {
                     <span className="timeline-year">{item.year}</span>
                     <h3>{item.degree}</h3>
                     {item.field && <h4>{item.field}</h4>}
-                    <p className="timeline-institution">{item.institution}</p>
+                    {item.minor && <h4 className="edu-minor">{item.minor}</h4>}
+                    {item.institution && item.institution !== item.degree && (
+                      <p className="timeline-institution">{item.institution}</p>
+                    )}
                     {item.description && <p>{item.description}</p>}
                     {item.coursework && (
                       <div className="edu-coursework">
