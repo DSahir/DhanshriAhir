@@ -4,7 +4,14 @@ import './Section.css';
 
 const { personal } = portfolioData;
 
-const phrases = ['a Frontend Designer', 'a Masters Student', 'looking for a Job'];
+const phrases = [
+  'debugging my way through life.',
+  'chasing one function at a time.',
+  'fluent in bits and bytes.',
+  'powered by algorithms.',
+  'learning, building, shipping.',
+  'building on first principles.',
+];
 
 function TypingAnimation() {
   const [phraseIndex, setPhraseIndex] = useState(0);
