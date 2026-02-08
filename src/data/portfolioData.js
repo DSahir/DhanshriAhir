@@ -20,12 +20,12 @@ const portfolioData = {
       "Hello! I'm <strong>Dhanshri Ahir</strong>, a passionate developer who loves building web applications and solving problems through code.",
       'I enjoy working with modern technologies and am always eager to learn new skills. My goal is to create impactful software that makes a difference.',
     ],
-    email: 'dhanshri@example.com',
-    location: 'India',
+    email: 'dsahir511@gmail.com',
+    location: 'Massachusetts, USA',
     resumeUrl: '#', // Replace with your actual resume file URL
     socialLinks: {
       linkedin: 'https://linkedin.com/in/dhanshri-ahir',
-      github: 'https://github.com/DhanshriAhir',
+      github: 'https://github.com/DSAhir',
     },
   },
 
@@ -36,11 +36,11 @@ const portfolioData = {
     {
       degree: 'Bachelor of Technology',
       field: 'Computer Science & Engineering',
-      institution: 'University Name', // <-- Replace with your actual university
-      year: '2020 - 2024',
+      institution: 'College Of Engineering, Pune', // <-- Replace with your actual university
+      year: '2018 - 2022',
       description:
         'Focused on software engineering, data structures, and algorithms.',
-      link: 'https://example.edu', // <-- Replace with your university URL
+      link: 'https://www.coeptech.ac.in/', // <-- Replace with your university URL
     },
     {
       degree: 'Higher Secondary (12th)',
