@@ -4,18 +4,46 @@ import './Section.css';
 
 const { personal } = portfolioData;
 
+// -----------------------------------------------------------------------
+// To make the contact form deliver emails:
+// 1. Go to https://formspree.io and sign up (free tier: 50 submissions/month)
+// 2. Create a new form and copy your form ID (e.g. "xpzvqkdl")
+// 3. Replace the FORMSPREE_ID below with your form ID
+// -----------------------------------------------------------------------
+const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // <-- Replace with your Formspree form ID
+
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setForm({ name: '', email: '', message: '' });
+    setStatus('sending');
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          _replyto: form.email,
+          message: form.message,
+        }),
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -48,8 +76,11 @@ function Contact() {
             </div>
           </div>
           <form className="contact-form" onSubmit={handleSubmit}>
-            {submitted && (
+            {status === 'success' && (
               <p className="success-message">Thank you! Your message has been sent.</p>
+            )}
+            {status === 'error' && (
+              <p className="error-message">Something went wrong. Please try again or email directly.</p>
             )}
             <input
               type="text"
@@ -75,7 +106,9 @@ function Contact() {
               onChange={handleChange}
               required
             />
-            <button type="submit" className="submit-btn">Send Message</button>
+            <button type="submit" className="submit-btn" disabled={status === 'sending'}>
+              {status === 'sending' ? 'Sending...' : 'Send Message'}
+            </button>
           </form>
         </div>
       </div>

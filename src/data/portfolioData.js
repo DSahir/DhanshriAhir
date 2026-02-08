@@ -269,8 +269,8 @@ const portfolioData = {
   // CERTIFICATES - Used in Certificates.jsx
   // ---------------------------------------------------------------------------
   certificates: [
-    { name: 'Certificate Name 1', link: '' }, // <-- Replace with your certificates
-    { name: 'Certificate Name 2', link: '' },
+    { name: 'Certificate Name 1', link: '', logo: '/logos/cert1.png' }, // <-- Replace with your certificates
+    { name: 'Certificate Name 2', link: '', logo: '/logos/cert2.png' },
   ],
 
   // ---------------------------------------------------------------------------
