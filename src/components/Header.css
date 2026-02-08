@@ -26,9 +26,24 @@
 .header-logo {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--accent);
   text-decoration: none;
   letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logo-bracket {
+  color: var(--color-education);
+  font-weight: 400;
+  font-family: 'Courier New', monospace;
+}
+
+.logo-name {
+  background: linear-gradient(135deg, var(--color-about), var(--color-projects), var(--color-experience));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .header-right {

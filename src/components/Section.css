@@ -94,8 +94,8 @@
   text-align: center;
   margin-top: 2px;
   font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--text-muted);
+  font-weight: 700;
+  color: var(--color-education);
   letter-spacing: -0.1px;
 }
 

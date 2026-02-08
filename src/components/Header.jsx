@@ -26,7 +26,9 @@ function Header({ activeSection, onNavigate }) {
     <header className="header">
       <div className="header-container">
         <a className="header-logo" href="#about" onClick={() => handleClick('About')}>
-          {personal.name}
+          <span className="logo-bracket">&lt;</span>
+          <span className="logo-name">{personal.name}</span>
+          <span className="logo-bracket"> /&gt;</span>
         </a>
         <div className="header-right">
           <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
