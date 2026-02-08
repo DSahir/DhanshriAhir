@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from './components/ThemeContext';
+import MouseGradient from './components/MouseGradient';
 import portfolioData from './data/portfolioData';
 import Header from './components/Header';
 import About from './components/About';
@@ -45,15 +46,28 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const handleVisibility = () => {
+      document.title = document.hidden ? "Where 'd You Go?" : 'Dhanshri Ahir';
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
+    return () => document.removeEventListener('visibilitychange', handleVisibility);
+  }, []);
+
   return (
     <ThemeProvider>
       <div className="app">
+        <MouseGradient />
         <Header activeSection={activeSection} onNavigate={handleNavigate} />
         <main className="main-content">
           <About />
+          <div className="section-divider" />
           <Education />
+          <div className="section-divider" />
           <Experience />
+          <div className="section-divider" />
           <Projects />
+          <div className="section-divider" />
           <Contact />
         </main>
         <footer className="footer">

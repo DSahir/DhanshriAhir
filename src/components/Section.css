@@ -1,12 +1,15 @@
+/* ======== Sections ======== */
 .section {
-  padding: 80px 24px;
+  padding: 62px 24px;
   min-height: 60vh;
-  background: var(--bg-primary);
+  background: transparent;
+  position: relative;
+  z-index: 1;
   transition: background 0.3s;
 }
 
 .section-alt {
-  background: var(--bg-secondary);
+  background: transparent;
 }
 
 .section-container {
@@ -29,10 +32,25 @@
   display: block;
   width: 40px;
   height: 3px;
-  background: var(--accent);
   margin: 12px auto 0;
   border-radius: 2px;
 }
+
+/* Per-section title colors + underline */
+.title-about { color: var(--color-about); }
+.title-about::after { background: var(--color-about); }
+
+.title-education { color: var(--color-education); }
+.title-education::after { background: var(--color-education); }
+
+.title-experience { color: var(--color-experience); }
+.title-experience::after { background: var(--color-experience); }
+
+.title-projects { color: var(--color-projects); }
+.title-projects::after { background: var(--color-projects); }
+
+.title-contact { color: var(--color-contact); }
+.title-contact::after { background: var(--color-contact); }
 
 /* ======== About ======== */
 .about-content {
@@ -55,6 +73,32 @@
   box-shadow: 0 8px 32px var(--glass-shadow);
 }
 
+.avatar-email {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: -0.1px;
+}
+
+.avatar-degree {
+  text-align: center;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-about);
+  letter-spacing: -0.1px;
+}
+
+.avatar-degree-secondary {
+  text-align: center;
+  margin-top: 2px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: -0.1px;
+}
+
 .about-text p {
   font-size: 1rem;
   line-height: 1.75;
@@ -64,7 +108,7 @@
 }
 
 .about-text strong {
-  color: var(--text-primary);
+  color: var(--color-about);
   font-weight: 600;
 }
 
@@ -99,9 +143,9 @@
 }
 
 .social-icon:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-bg);
+  color: var(--color-about);
+  border-color: var(--color-about);
+  background: var(--color-about-bg);
   transform: translateY(-2px);
 }
 
@@ -110,7 +154,7 @@
   align-items: center;
   gap: 6px;
   padding: 9px 18px;
-  background: var(--accent);
+  background: var(--color-about);
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -120,12 +164,44 @@
   letter-spacing: -0.1px;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .resume-btn:hover {
-  background: var(--accent-hover);
+  background: var(--color-about);
   transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+}
+
+/* ======== Typing Animation ======== */
+.typing-wrapper {
+  margin-top: 36px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  text-align: center;
+}
+
+.typing-static {
+  color: var(--text-secondary);
+}
+
+.typing-dynamic {
+  color: var(--color-about);
+  font-weight: 600;
+}
+
+.typing-cursor {
+  display: inline-block;
+  color: var(--color-about);
+  animation: blink 0.7s step-end infinite;
+  margin-left: 1px;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* ======== Timeline (Education / Experience items) ======== */
@@ -161,6 +237,10 @@
   box-shadow: 0 0 0 2px var(--accent-bg);
 }
 
+/* Section-specific timeline dots */
+.section-education .timeline-dot { background: var(--color-education); box-shadow: 0 0 0 2px rgba(103, 232, 249, 0.15); }
+.section-experience .timeline-dot { background: var(--color-experience); box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.15); }
+
 .timeline-year {
   display: inline-block;
   font-size: 0.8rem;
@@ -172,12 +252,23 @@
   margin-bottom: 8px;
 }
 
+.section-education .timeline-year { color: var(--color-education); background: rgba(103, 232, 249, 0.1); }
+.section-experience .timeline-year { color: var(--color-experience); background: rgba(251, 191, 36, 0.1); }
+
 .timeline-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-primary);
   margin: 4px 0;
   letter-spacing: -0.2px;
+}
+
+.section-experience .timeline-content h3 {
+  color: var(--color-experience);
+}
+
+.section-education .timeline-content h3 {
+  color: var(--color-education);
 }
 
 .timeline-content h4 {
@@ -191,6 +282,36 @@
   font-size: 0.85rem;
   color: var(--text-faint);
   margin-bottom: 8px;
+}
+
+/* Education card with top-right link icon */
+.edu-card {
+  position: relative;
+}
+
+.institution-link {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-faint);
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.section-education .institution-link:hover {
+  color: var(--color-education);
+  border-color: var(--color-education);
+  background: var(--color-education-bg);
 }
 
 .timeline-content p {
@@ -215,6 +336,60 @@
   transform: translateY(-3px);
   background: var(--bg-card-hover);
   box-shadow: 0 8px 40px var(--glass-shadow);
+}
+
+/* Per-section pastel hover glow on cards */
+.section-about .card:hover {
+  border-color: rgba(167, 139, 250, 0.25);
+  box-shadow: 0 0 24px rgba(167, 139, 250, 0.12), 0 8px 40px var(--glass-shadow);
+}
+.section-education .card:hover {
+  border-color: rgba(103, 232, 249, 0.25);
+  box-shadow: 0 0 24px rgba(103, 232, 249, 0.12), 0 8px 40px var(--glass-shadow);
+}
+.section-experience .card:hover {
+  border-color: rgba(251, 191, 36, 0.25);
+  box-shadow: 0 0 24px rgba(251, 191, 36, 0.12), 0 8px 40px var(--glass-shadow);
+}
+.section-projects .card:hover {
+  border-color: rgba(244, 114, 182, 0.25);
+  box-shadow: 0 0 24px rgba(244, 114, 182, 0.12), 0 8px 40px var(--glass-shadow);
+}
+.section-contact .card:hover {
+  border-color: rgba(110, 231, 183, 0.25);
+  box-shadow: 0 0 24px rgba(110, 231, 183, 0.12), 0 8px 40px var(--glass-shadow);
+}
+
+/* Pastel glow on experience collapsible categories */
+.exp-category:hover {
+  border-color: rgba(251, 191, 36, 0.25);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.1), 0 4px 24px var(--glass-shadow);
+}
+
+/* Stronger glow for light theme */
+[data-theme="light"] .section-about .card:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: 0 0 32px rgba(124, 58, 237, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .section-education .card:hover {
+  border-color: rgba(8, 145, 178, 0.35);
+  box-shadow: 0 0 32px rgba(8, 145, 178, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .section-experience .card:hover {
+  border-color: rgba(217, 119, 6, 0.35);
+  box-shadow: 0 0 32px rgba(217, 119, 6, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .section-projects .card:hover {
+  border-color: rgba(219, 39, 119, 0.35);
+  box-shadow: 0 0 32px rgba(219, 39, 119, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .section-contact .card:hover {
+  border-color: rgba(5, 150, 105, 0.35);
+  box-shadow: 0 0 32px rgba(5, 150, 105, 0.18), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="light"] .exp-category:hover {
+  border-color: rgba(217, 119, 6, 0.35);
+  box-shadow: 0 0 28px rgba(217, 119, 6, 0.15), 0 4px 24px var(--glass-shadow);
 }
 
 /* ======== Experience Collapsible (Glass) ======== */
@@ -253,7 +428,7 @@
 }
 
 .exp-category-header:hover {
-  background: var(--accent-bg);
+  background: var(--color-experience-bg);
 }
 
 .exp-category-title {
@@ -263,8 +438,8 @@
 .exp-category-count {
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--accent);
-  background: var(--accent-bg-strong);
+  color: var(--color-experience);
+  background: rgba(251, 191, 36, 0.1);
   padding: 2px 10px;
   border-radius: 8px;
   margin-right: 12px;
@@ -290,6 +465,25 @@
 .exp-category-body.open {
   max-height: 2000px;
   padding: 8px 24px 24px;
+}
+
+/* Collapsed preview: show item titles */
+.exp-collapsed-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 24px 14px;
+}
+
+.exp-collapsed-item {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--color-experience-bg);
+  border: 1px solid rgba(251, 191, 36, 0.1);
+  padding: 3px 12px;
+  border-radius: 8px;
+  letter-spacing: -0.1px;
 }
 
 /* Experience list */
@@ -321,7 +515,7 @@
 }
 
 .project-card-header h3 {
-  color: var(--text-primary);
+  color: var(--color-projects);
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: -0.2px;
@@ -347,9 +541,9 @@
 }
 
 .project-link-icon:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-bg);
+  color: var(--color-projects);
+  border-color: var(--color-projects);
+  background: var(--color-projects-bg);
 }
 
 .project-body {
@@ -371,10 +565,10 @@
   font-size: 0.75rem;
   font-weight: 500;
   padding: 4px 10px;
-  background: var(--accent-bg-strong);
-  color: var(--accent);
+  background: var(--color-projects-bg);
+  color: var(--color-projects);
   border-radius: 8px;
-  border: 1px solid var(--accent-bg);
+  border: 1px solid rgba(244, 114, 182, 0.1);
 }
 
 /* ======== Contact (Glass) ======== */
@@ -386,7 +580,7 @@
 }
 
 .contact-info h3 {
-  color: var(--text-primary);
+  color: var(--color-contact);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 12px;
@@ -441,7 +635,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--accent);
+  border-color: var(--color-contact);
   background: var(--bg-card);
 }
 
@@ -452,7 +646,7 @@
 
 .submit-btn {
   padding: 12px 24px;
-  background: var(--accent);
+  background: var(--color-contact);
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -461,16 +655,17 @@
   font-family: inherit;
   letter-spacing: -0.1px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .submit-btn:hover {
-  background: var(--accent-hover);
+  background: var(--color-contact);
   transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(110, 231, 183, 0.3);
 }
 
 .success-message {
-  color: #4caf50;
+  color: var(--color-contact);
   font-weight: 500;
   text-align: center;
 }

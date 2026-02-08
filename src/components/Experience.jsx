@@ -12,9 +12,9 @@ function Experience() {
   };
 
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section section-experience">
       <div className="section-container">
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title title-experience">Experience</h2>
         <div className="experience-categories">
           {experience.map((category, catIndex) => (
             <div key={catIndex} className="exp-category">
@@ -23,7 +23,9 @@ function Experience() {
                 onClick={() => toggleCategory(catIndex)}
               >
                 <span className="exp-category-title">{category.title}</span>
-                <span className="exp-category-count">{category.items.length}</span>
+                {openCategories[catIndex] && (
+                  <span className="exp-category-count">{category.items.length}</span>
+                )}
                 <svg
                   className="exp-chevron"
                   width="20"
@@ -38,6 +40,13 @@ function Experience() {
                   <polyline points="6 9 12 15 18 9" />
                 </svg>
               </button>
+              {!openCategories[catIndex] && (
+                <div className="exp-collapsed-preview">
+                  {category.items.map((item, idx) => (
+                    <span key={idx} className="exp-collapsed-item">{item.role}</span>
+                  ))}
+                </div>
+              )}
               <div className={`exp-category-body ${openCategories[catIndex] ? 'open' : ''}`}>
                 <div className="timeline">
                   {category.items.map((item, index) => (
