@@ -112,6 +112,11 @@
   font-weight: 600;
 }
 
+.bio-highlight {
+  color: var(--color-about);
+  font-weight: 600;
+}
+
 /* Social icons + Resume row */
 .about-actions {
   display: flex;

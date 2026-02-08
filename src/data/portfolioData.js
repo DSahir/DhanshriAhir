@@ -14,8 +14,11 @@ const portfolioData = {
     title: 'Developer',
     avatarUrl: '/profile-photo.jpg', // Place your photo at public/profile-photo.jpg
     bio: [
-      "Hello! I'm <strong>Dhanshri Ahir</strong>, a passionate developer who loves building web applications and solving problems through code.",
-      'I enjoy working with modern technologies and am always eager to learn new skills. My goal is to create impactful software that makes a difference.',
+      'Hi there \u{1F44B}',
+      'I am a graduate student in <span class="bio-highlight">Computer Science</span> at the <span class="bio-highlight">University of Massachusetts Amherst</span>, and hold a B.Tech in Computer Engineering from the <span class="bio-highlight">College of Engineering, Pune</span>.',
+      'I previously worked at <span class="bio-highlight">Deutsche Bank</span> as an <span class="bio-highlight">Associate</span> for two years, and before that gained industry experience at <span class="bio-highlight">FinIQ Consulting</span> as a <span class="bio-highlight">Software Development Engineer</span> and <span class="bio-highlight">Intern</span>. My professional interests lie in <span class="bio-highlight">Machine Learning</span> and <span class="bio-highlight">Data Systems</span>, with a focus on building technologies that learn, adapt, and deliver meaningful insights.',
+      'Outside of engineering, I enjoy exploring literature, painting, and traveling. I often find inspiration through books, blogs, and music.',
+      'Please feel free to reach out if you would like to connect, collaborate, or discuss potential opportunities.',
     ],
     email: 'dahir@umass.edu',
     location: 'Massachusetts, USA',
