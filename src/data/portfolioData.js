@@ -26,6 +26,7 @@ const portfolioData = {
     socialLinks: {
       linkedin: 'https://linkedin.com/in/dhanshri-ahir',
       github: 'https://github.com/DSAhir',
+      discord: 'https://discord.com/users/dhanshri',
     },
   },
 

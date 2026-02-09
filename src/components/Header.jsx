@@ -6,11 +6,8 @@ import './Header.css';
 const { personal } = portfolioData;
 
 const logoColors = [
-  'var(--color-about)',
-  'var(--color-education)',
-  'var(--color-experience)',
-  'var(--color-projects)',
-  'var(--color-contact)',
+  '#a855f7',
+  '#ec4899',
 ];
 
 const navItems = [

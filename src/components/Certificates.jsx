@@ -22,7 +22,7 @@ function Certificates() {
           {certificates.map((cert, index) => (
             <div key={index} className="card cert-card">
               {cert.logo && (
-                <img src={cert.logo} alt={cert.name} className="card-logo" />
+                <img src={cert.logo} alt={cert.name} className="cert-logo" />
               )}
               <h3 className="cert-name">{cert.name}</h3>
               {cert.link && (

@@ -80,7 +80,10 @@ function Contact() {
               <p className="success-message">Thank you! Your message has been sent.</p>
             )}
             {status === 'error' && (
-              <p className="error-message">Something went wrong. Please try again or email directly.</p>
+              <p className="error-message">
+                Something went wrong. Please try again or{' '}
+                <a href={`mailto:${personal.email}`} className="error-email-link">email directly</a>.
+              </p>
             )}
             <input
               type="text"

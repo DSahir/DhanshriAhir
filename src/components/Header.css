@@ -4,7 +4,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 48px);
-  max-width: 1100px;
+  max-width: 1048px;
   background: var(--bg-header);
   backdrop-filter: blur(var(--blur));
   -webkit-backdrop-filter: blur(var(--blur));
@@ -34,7 +34,7 @@
 }
 
 .logo-bracket {
-  color: var(--color-education);
+  color: #a855f7;
   font-weight: 400;
   font-family: 'Courier New', monospace;
 }

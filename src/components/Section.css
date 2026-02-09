@@ -76,8 +76,8 @@
 }
 
 .avatar-image {
-  width: 192px;
-  height: 192px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--glass-border);
@@ -320,8 +320,8 @@
 }
 
 .card-logo {
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   border-radius: 8px;
   object-fit: contain;
   background: var(--bg-card);
@@ -513,8 +513,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 18px 20px;
+  gap: 8px;
+  padding: 12px 14px;
+}
+
+.cert-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  padding: 2px;
+  flex-shrink: 0;
 }
 
 .cert-name {
@@ -580,6 +591,36 @@
   color: var(--color-education);
   border-color: var(--color-education);
   background: var(--color-education-bg);
+}
+
+/* Inline institution link (inside side column, not absolutely positioned) */
+.institution-link-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-faint);
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  align-self: flex-end;
+}
+
+.section-education .institution-link-inline:hover {
+  color: var(--color-education);
+  border-color: var(--color-education);
+  background: var(--color-education-bg);
+}
+
+.section-experience .institution-link-inline:hover {
+  color: var(--color-experience);
+  border-color: var(--color-experience);
+  background: var(--color-experience-bg);
 }
 
 .timeline-content p {
@@ -757,7 +798,7 @@
 /* Experience list */
 .experience-list {
   margin: 12px 0 0;
-  padding-left: 20px;
+  padding-left: 68px;
   color: var(--text-muted);
   line-height: 1.8;
   font-size: 0.93rem;
@@ -942,6 +983,17 @@
   color: #ef4444;
   font-weight: 500;
   text-align: center;
+}
+
+.error-email-link {
+  color: var(--color-contact);
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.error-email-link:hover {
+  color: var(--text-primary);
 }
 
 .submit-btn:disabled {
