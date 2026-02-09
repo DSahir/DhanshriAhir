@@ -4,46 +4,26 @@ import './Section.css';
 
 const { personal } = portfolioData;
 
-// -----------------------------------------------------------------------
-// To make the contact form deliver emails:
-// 1. Go to https://formspree.io and sign up (free tier: 50 submissions/month)
-// 2. Create a new form and copy your form ID (e.g. "xpzvqkdl")
-// 3. Replace the FORMSPREE_ID below with your form ID
-// -----------------------------------------------------------------------
-const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // <-- Replace with your Formspree form ID
-
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [status, setStatus] = useState('idle'); // idle | success
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus('sending');
 
-    try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          name: form.name,
-          _replyto: form.email,
-          message: form.message,
-        }),
-      });
+    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+    );
 
-      if (res.ok) {
-        setStatus('success');
-        setForm({ name: '', email: '', message: '' });
-      } else {
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
-    }
+    window.location.href = `mailto:${personal.email}?subject=${subject}&body=${body}`;
+
+    setStatus('success');
+    setForm({ name: '', email: '', message: '' });
   };
 
   return (
@@ -77,13 +57,7 @@ function Contact() {
           </div>
           <form className="contact-form" onSubmit={handleSubmit}>
             {status === 'success' && (
-              <p className="success-message">Thank you! Your message has been sent.</p>
-            )}
-            {status === 'error' && (
-              <p className="error-message">
-                Something went wrong. Please try again or{' '}
-                <a href={`mailto:${personal.email}`} className="error-email-link">email directly</a>.
-              </p>
+              <p className="success-message">Your email client has been opened with the message. Please send it to complete delivery.</p>
             )}
             <input
               type="text"
@@ -109,8 +83,8 @@ function Contact() {
               onChange={handleChange}
               required
             />
-            <button type="submit" className="submit-btn" disabled={status === 'sending'}>
-              {status === 'sending' ? 'Sending...' : 'Send Message'}
+            <button type="submit" className="submit-btn">
+              Send Message
             </button>
           </form>
         </div>
