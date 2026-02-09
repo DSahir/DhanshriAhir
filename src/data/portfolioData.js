@@ -40,7 +40,7 @@ const portfolioData = {
       year: 'Expected - May 2027',
       location: 'MA, USA',
       gpa: 'N/A',
-      logo: '/logos/umass.png', // Place logo at public/logos/umass.png
+      logo: import.meta.env.BASE_URL + 'logos/umass.png', // Place logo at public/logos/umass.png
       coursework: [
         'COMPSCI 589 Machine Learning',
         'COMPSCI 532 Systems for Data Science',
@@ -56,7 +56,7 @@ const portfolioData = {
       year: 'Graduated : 2022',
       location: 'Pune, India',
       gpa: '8.79/10',
-      logo: '/logos/coep.png', // Place logo at public/logos/coep.png
+      logo: import.meta.env.BASE_URL + 'logos/coep.png', // Place logo at public/logos/coep.png
       coursework: [
         'Data Structures and Algorithms',
         'Algorithms and Complexity',
@@ -81,7 +81,7 @@ const portfolioData = {
           organization: 'Deutsche Bank',
           period: 'Jan 2024 - Jun 2024',
           location: 'Pune, India',
-          logo: '/logos/deutsche-bank.png', // Place logo at public/logos/deutsche-bank.png
+          logo: import.meta.env.BASE_URL + 'logos/deutsche-bank.png', // Place logo at public/logos/deutsche-bank.png
           link: 'https://www.db.com/index?language_id=1&kid=sl.redirect-en.shortcut',
           points: [
             'Boosted GPDP data pipeline performance by 60%+ and cut storage usage by ~40% by engineering Spring Boot microservices and optimizing complex Oracle PL/SQL with parallel execution and efficient batching.',
@@ -95,7 +95,7 @@ const portfolioData = {
           organization: 'FinIQ Consulting',
           period: 'July 2022 - Dec 2022',
           location: 'Pune, India',
-          logo: '/logos/finiq.png', // Place logo at public/logos/finiq.png
+          logo: import.meta.env.BASE_URL + 'logos/finiq.png', // Place logo at public/logos/finiq.png
           link: '',
           points: [
             'Improved trade message processing performance by 80% by integrating Angular-based front-end systems with a threaded staging table and implementing FIX Protocol solutions in C++ for FX Derivatives and Structured Products trading workflows.',
@@ -107,7 +107,7 @@ const portfolioData = {
           organization: 'FinIQ Consulting',
           period: 'Jan 2022 - June 2022',
           location: 'Pune, India',
-          logo: '/logos/finiq.png', // Place logo at public/logos/finiq.png
+          logo: import.meta.env.BASE_URL + 'logos/finiq.png', // Place logo at public/logos/finiq.png
           link: '',
           points: [
             'Increased user engagement by 20% and reduced navigation time by 30% by redesigning the company\'s web application using React Hooks and Material UI to build dynamic, user-centric interfaces.',
@@ -125,7 +125,7 @@ const portfolioData = {
             'International Journal of Research in Engineering, Science and Management — Volume 7, Issue 12, December 2024',
           period: '2024',
           location: '',
-          logo: '/logos/ijresm.png', // Place logo at public/logos/ijresm.png
+          logo: import.meta.env.BASE_URL + 'logos/ijresm.png', // Place logo at public/logos/ijresm.png
           link: 'https://www.ijresm.com/storage/articles/3/IJRESM_V7_I12_20.pdf',
           points: [
             'Achieved 97%+ classification accuracy in leukocyte identification by designing and training a CNN-based deep learning model on microscopic blood smear images, reducing reliance on manual examination.',
@@ -142,7 +142,7 @@ const portfolioData = {
             'College of Engineering Pune, Capstone Project',
           period: '2022',
           location: '',
-          logo: '/logos/coep.png', // Place logo at public/logos/nlp-research.png
+          logo: import.meta.env.BASE_URL + 'logos/coep.png', // Place logo at public/logos/nlp-research.png
           link: 'https://drive.google.com/drive/folders/1revTJZGgwTT0bFH1q6d9kHMiHBbK1YS2',
           points: [
             'Led a 3-member team to build an NLP-based interview analysis framework, reducing subjective evaluation bias by applying probabilistic topic modeling (LDA) and topic change point detection on real-world interview transcripts.',
@@ -161,7 +161,7 @@ const portfolioData = {
           organization: 'Pune Startup Fest \'21',
           period: '2021',
           location: 'Pune, India',
-          logo: '/logos/pune-startup-fest.png', // Place logo at public/logos/pune-startup-fest.png
+          logo: import.meta.env.BASE_URL + 'logos/pune-startup-fest.png', // Place logo at public/logos/pune-startup-fest.png
           link: 'https://www.coeptech.ac.in/student-corner/student-clubs/pune-startup-fest/',
           points: [
             'Organized the fest to facilitate ₹3.5 Cr funding for startups and 250+ student internships',
@@ -173,7 +173,7 @@ const portfolioData = {
           organization: 'Bhau Institute of Innovation, Entrepreneurship and Leadership',
           period: '2021 - 2022',
           location: 'Pune, India',
-          logo: '/logos/bhau.png', // Place logo at public/logos/bhau.png
+          logo: import.meta.env.BASE_URL + 'logos/bhau.png', // Place logo at public/logos/bhau.png
           link: 'https://bhau.org/bhau-e-cell/',
           points: [
             'Increased student participation in entrepreneurship events by promoting startup opportunities and coordinating outreach for Vowels E-Cell.',
@@ -190,7 +190,7 @@ const portfolioData = {
           organization: 'GeeksforGeeks',
           period: '',
           location: 'India',
-          logo: '/logos/gfg.png', // Place logo at public/logos/gfg.png
+          logo: import.meta.env.BASE_URL + 'logos/gfg.png', // Place logo at public/logos/gfg.png
           link: 'https://www.geeksforgeeks.org/c/c-program-to-read-a-range-of-bytes-from-file-and-print-it-to-console/',
           points: [
             'Wrote and published technical articles on computer programming concepts, focusing on clear explanations, code examples, and best practices for learners at different levels.',
@@ -202,7 +202,7 @@ const portfolioData = {
           organization: 'ABSA – Anjali Bhagwat Shooting Academy',
           period: '',
           location: 'Pune, India',
-          logo: '/logos/absa.png', // Place logo at public/logos/absa.png
+          logo: import.meta.env.BASE_URL + 'logos/absa.png', // Place logo at public/logos/absa.png
           link: 'https://www.anjalibhagwat.com/projects',
           points: [
             'Trained at ABSA – Anjali Bhagwat Shooting Academy, Pune, in 10m air rifle basics, safety, posture, and precision shooting techniques under structured coaching.',
@@ -214,7 +214,7 @@ const portfolioData = {
           organization: 'Social Contribution',
           period: '',
           location: 'Akola, India',
-          logo: '/logos/teach.png',
+          logo: import.meta.env.BASE_URL + 'logos/teach.png',
           link: 'https://drive.google.com/drive/folders/1revTJZGgwTT0bFH1q6d9kHMiHBbK1YS2',
           points: [
             'Mentored and taught 50+ students mathematics and basic computer skills at a tribal Ashram school during semester breaks, focusing on building foundational numeracy and digital literacy.',
@@ -276,11 +276,11 @@ const portfolioData = {
   // CERTIFICATES - Used in Certificates.jsx
   // ---------------------------------------------------------------------------
   certificates: [
-    { name: 'Neural Networks and Deep Learning', link: 'https://drive.google.com/file/d/17fUm7MxuFlh5_oDq94ta5bA_tj65ETA3/view?usp=sharing', logo: '/logos/coursera.png' }, // <-- Replace with your certificates
-    { name: 'Improving Deep Neural Networks', link: 'https://drive.google.com/file/d/1Kku8bZv5Vc6FY5s8zKUOAOEOZaIpEJQO/view?usp=sharing', logo: '/logos/coursera.png' },
-    { name: 'Structuring Machine Learning Projects', link: 'https://drive.google.com/file/d/13-i_KZS5cy-nsum-x1qILMw50OMxfyM9/view?usp=sharing', logo: '/logos/coursera.png' },
-    { name: 'Cyber Security Foundation', link: 'https://drive.google.com/file/d/1vVTc1oEv9KZukPBfK33cg6ICQG0hLT8p/view?usp=sharing', logo: '/logos/certi-proof.png' },
-    { name: 'SEO Fundamentals Exam', link: 'https://drive.google.com/file/d/11b47UcvZn3GVX_iPG30gLXorgSlPRYHc/view?usp=sharing', logo: '/logos/semrush.png' },
+    { name: 'Neural Networks and Deep Learning', link: 'https://drive.google.com/file/d/17fUm7MxuFlh5_oDq94ta5bA_tj65ETA3/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/coursera.png' }, // <-- Replace with your certificates
+    { name: 'Improving Deep Neural Networks', link: 'https://drive.google.com/file/d/1Kku8bZv5Vc6FY5s8zKUOAOEOZaIpEJQO/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/coursera.png' },
+    { name: 'Structuring Machine Learning Projects', link: 'https://drive.google.com/file/d/13-i_KZS5cy-nsum-x1qILMw50OMxfyM9/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/coursera.png' },
+    { name: 'Cyber Security Foundation', link: 'https://drive.google.com/file/d/1vVTc1oEv9KZukPBfK33cg6ICQG0hLT8p/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/certi-proof.png' },
+    { name: 'SEO Fundamentals Exam', link: 'https://drive.google.com/file/d/11b47UcvZn3GVX_iPG30gLXorgSlPRYHc/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/semrush.png' },
     ],
 
   // ---------------------------------------------------------------------------
