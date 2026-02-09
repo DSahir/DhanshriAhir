@@ -7,6 +7,7 @@ import About from './components/About';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import './App.css';
 
@@ -24,7 +25,7 @@ function App() {
   };
 
   useEffect(() => {
-    const sectionIds = ['about', 'education', 'experience', 'projects', 'contact'];
+    const sectionIds = ['about', 'education', 'experience', 'projects', 'certificates', 'contact'];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -67,6 +68,8 @@ function App() {
           <Experience />
           <div className="section-divider" />
           <Projects />
+          <div className="section-divider" />
+          <Certificates />
           <div className="section-divider" />
           <Contact />
         </main>

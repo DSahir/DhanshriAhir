@@ -4,7 +4,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 48px);
-  max-width: 1100px;
+  max-width: 1048px;
   background: var(--bg-header);
   backdrop-filter: blur(var(--blur));
   -webkit-backdrop-filter: blur(var(--blur));
@@ -26,9 +26,21 @@
 .header-logo {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--accent);
   text-decoration: none;
   letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logo-bracket {
+  color: #a855f7;
+  font-weight: 400;
+  font-family: 'Courier New', monospace;
+}
+
+.logo-name {
+  display: inline-flex;
 }
 
 .header-right {
@@ -59,12 +71,14 @@
 .nav-link.nav-experience:hover { color: var(--color-experience); background: var(--color-experience-bg); }
 .nav-link.nav-projects:hover { color: var(--color-projects); background: var(--color-projects-bg); }
 .nav-link.nav-contact:hover { color: var(--color-contact); background: var(--color-contact-bg); }
+.nav-link.nav-certificates:hover { color: var(--color-certificates); background: var(--color-certificates-bg); }
 
 /* Per-section nav active colors */
 .nav-link.nav-about.active { color: var(--color-about); background: var(--color-about-bg); }
 .nav-link.nav-education.active { color: var(--color-education); background: var(--color-education-bg); }
 .nav-link.nav-experience.active { color: var(--color-experience); background: var(--color-experience-bg); }
 .nav-link.nav-projects.active { color: var(--color-projects); background: var(--color-projects-bg); }
+.nav-link.nav-certificates.active { color: var(--color-certificates); background: var(--color-certificates-bg); }
 .nav-link.nav-contact.active { color: var(--color-contact); background: var(--color-contact-bg); }
 
 .theme-toggle {

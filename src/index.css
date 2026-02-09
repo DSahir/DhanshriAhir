@@ -43,8 +43,10 @@ html {
   --color-experience-bg: rgba(251, 191, 36, 0.06);
   --color-projects: #f472b6;
   --color-projects-bg: rgba(244, 114, 182, 0.06);
-  --color-contact: #6ee7b7;
-  --color-contact-bg: rgba(110, 231, 183, 0.06);
+  --color-contact: #63d0a5;
+  --color-contact-bg: rgba(99, 208, 165, 0.06);
+  --color-certificates: #facc15;
+  --color-certificates-bg: rgba(250, 204, 21, 0.06);
 
 }
 
@@ -82,7 +84,47 @@ html {
   --color-projects-bg: rgba(219, 39, 119, 0.06);
   --color-contact: #059669;
   --color-contact-bg: rgba(5, 150, 105, 0.06);
+  --color-certificates: #ca8a04;
+  --color-certificates-bg: rgba(202, 138, 4, 0.06);
 
+}
+
+/* Pastel Glassmorphism theme */
+[data-theme="glass"] {
+  --bg-primary: #F7F9FC;
+  --bg-secondary: #EDEFF5;
+  --bg-header: rgba(247, 249, 252, 0.55);
+  --bg-card: rgba(255, 255, 255, 0.45);
+  --bg-card-hover: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --glass-shadow: rgba(0, 0, 0, 0.06);
+  --text-primary: #3a3a5c;
+  --text-secondary: #5a5a7a;
+  --text-muted: #8A94A6;
+  --text-faint: #a0a8b8;
+  --accent: #b08bfa;
+  --accent-hover: #9a6ef0;
+  --accent-bg: rgba(176, 139, 250, 0.08);
+  --accent-bg-strong: rgba(176, 139, 250, 0.14);
+  --border: rgba(255, 255, 255, 0.3);
+  --shadow: rgba(0, 0, 0, 0.04);
+  --timeline-line: rgba(220, 234, 247, 0.6);
+  --blur: 16px;
+  --input-bg: rgba(255, 255, 255, 0.55);
+
+  /* Pastel section colors (glass mode) */
+  --color-about: #9b7ad8;
+  --color-about-bg: rgba(230, 223, 246, 0.35);
+  --color-education: #5ba8c8;
+  --color-education-bg: rgba(220, 234, 247, 0.35);
+  --color-experience: #d4a24a;
+  --color-experience-bg: rgba(251, 227, 215, 0.35);
+  --color-projects: #d06090;
+  --color-projects-bg: rgba(244, 221, 228, 0.35);
+  --color-contact: #4daa80;
+  --color-contact-bg: rgba(223, 242, 234, 0.35);
+  --color-certificates: #c49520;
+  --color-certificates-bg: rgba(251, 227, 215, 0.35);
 }
 
 body {
@@ -93,6 +135,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background 0.3s, color 0.3s;
+}
+
+[data-theme="glass"] body {
+  background: linear-gradient(135deg, #F7F9FC 0%, #EDEFF5 100%);
 }
 
 /* Interactive mouse-following gradient blob */
@@ -184,4 +230,94 @@ body {
     transparent 100%
   );
   box-shadow: 0 0 16px rgba(124, 58, 237, 0.12), 0 0 16px rgba(8, 145, 178, 0.12);
+}
+
+/* Glass theme overrides */
+[data-theme="glass"] .header {
+  background: linear-gradient(135deg, rgba(230,223,246,0.5), rgba(220,234,247,0.5));
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+[data-theme="glass"] .card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.45), rgba(247,249,252,0.55));
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+[data-theme="glass"] .card:hover {
+  background: linear-gradient(135deg, rgba(255,255,255,0.65), rgba(247,249,252,0.75));
+}
+
+[data-theme="glass"] .exp-category {
+  background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(247,249,252,0.5));
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+[data-theme="glass"] .section-divider {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(230,223,246,0.4) 20%,
+    rgba(220,234,247,0.5) 40%,
+    rgba(244,221,228,0.4) 60%,
+    rgba(223,242,234,0.4) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 12px rgba(230,223,246,0.2), 0 0 12px rgba(220,234,247,0.2);
+}
+
+[data-theme="glass"] .mouse-gradient-blob {
+  opacity: 0.2;
+  filter: blur(100px) saturate(120%);
+}
+
+[data-theme="glass"] .mouse-gradient-blob--primary {
+  background: radial-gradient(circle, #E6DFF6 0%, transparent 70%);
+  width: 700px;
+  height: 700px;
+}
+
+[data-theme="glass"] .mouse-gradient-blob--secondary {
+  background: radial-gradient(circle, #DCEAF7 0%, transparent 70%);
+  width: 600px;
+  height: 600px;
+}
+
+[data-theme="glass"] .mouse-gradient-blob--tertiary {
+  background: radial-gradient(circle, #F4DDE4 0%, transparent 70%);
+  width: 500px;
+  height: 500px;
+}
+
+/* Glass theme card hover glows */
+[data-theme="glass"] .section-about .card:hover {
+  border-color: rgba(230, 223, 246, 0.6);
+  box-shadow: 0 0 28px rgba(230, 223, 246, 0.3), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="glass"] .section-education .card:hover {
+  border-color: rgba(220, 234, 247, 0.6);
+  box-shadow: 0 0 28px rgba(220, 234, 247, 0.3), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="glass"] .section-experience .card:hover {
+  border-color: rgba(251, 227, 215, 0.6);
+  box-shadow: 0 0 28px rgba(251, 227, 215, 0.3), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="glass"] .section-projects .card:hover {
+  border-color: rgba(244, 221, 228, 0.6);
+  box-shadow: 0 0 28px rgba(244, 221, 228, 0.3), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="glass"] .section-certificates .card:hover {
+  border-color: rgba(251, 227, 215, 0.6);
+  box-shadow: 0 0 28px rgba(251, 227, 215, 0.3), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="glass"] .section-contact .card:hover {
+  border-color: rgba(223, 242, 234, 0.6);
+  box-shadow: 0 0 28px rgba(223, 242, 234, 0.3), 0 8px 40px var(--glass-shadow);
+}
+[data-theme="glass"] .exp-category:hover {
+  border-color: rgba(251, 227, 215, 0.6);
+  box-shadow: 0 0 24px rgba(251, 227, 215, 0.25), 0 4px 24px var(--glass-shadow);
 }

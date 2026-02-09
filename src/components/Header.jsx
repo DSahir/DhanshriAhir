@@ -3,14 +3,21 @@ import { useTheme } from './ThemeContext';
 import portfolioData from '../data/portfolioData';
 import './Header.css';
 
+const { personal } = portfolioData;
+
+const logoColors = [
+  '#a855f7',
+  '#ec4899',
+];
+
 const navItems = [
   { name: 'About', colorClass: 'nav-about' },
   { name: 'Education', colorClass: 'nav-education' },
   { name: 'Experience', colorClass: 'nav-experience' },
   { name: 'Projects', colorClass: 'nav-projects' },
+  { name: 'Certificates', colorClass: 'nav-certificates' },
   { name: 'Contact', colorClass: 'nav-contact' },
 ];
-const { navItems, personal } = portfolioData;
 
 function Header({ activeSection, onNavigate }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +32,15 @@ function Header({ activeSection, onNavigate }) {
     <header className="header">
       <div className="header-container">
         <a className="header-logo" href="#about" onClick={() => handleClick('About')}>
-          {personal.name}
+          <span className="logo-bracket">&lt;</span>
+          <span className="logo-name">
+            {personal.name.split('').map((ch, i) => (
+              <span key={i} style={{ color: ch === ' ' ? 'transparent' : logoColors[i % logoColors.length] }}>
+                {ch === ' ' ? '\u00A0' : ch}
+              </span>
+            ))}
+          </span>
+          <span className="logo-bracket"> /&gt;</span>
         </a>
         <div className="header-right">
           <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
@@ -47,7 +62,13 @@ function Header({ activeSection, onNavigate }) {
             className="theme-toggle"
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={
+              theme === 'dark'
+                ? 'Switch to light mode'
+                : theme === 'light'
+                ? 'Switch to glass mode'
+                : 'Switch to dark mode'
+            }
           >
             {theme === 'dark' ? (
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -60,6 +81,12 @@ function Header({ activeSection, onNavigate }) {
                 <line x1="21" y1="12" x2="23" y2="12" />
                 <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
                 <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
+            ) : theme === 'light' ? (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
               </svg>
             ) : (
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
