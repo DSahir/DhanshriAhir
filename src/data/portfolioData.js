@@ -228,50 +228,59 @@ const portfolioData = {
   // ---------------------------------------------------------------------------
   projects: [
     {
-      title: 'Portfolio Website',
-      body: 'A modern, responsive personal portfolio built with React and Vite. Features smooth scroll navigation, dark/light theme toggle, collapsible experience sections, and a clean card-based layout to showcase projects and skills.',
-      tech: ['React', 'Vite', 'CSS3', 'JavaScript'],
-      link: 'https://github.com/DhanshriAhir/portfolio',
+    title: 'Price Tracer',
+    body: 'A full-stack web application designed to track and compare product prices across multiple sources. Features a Node.js backend with API endpoints, a responsive frontend built with React, and includes comprehensive documentation. The application helps users monitor price changes and make informed purchasing decisions with real-time price tracking capabilities.',
+    tech: ['JavaScript', 'React', 'Node.js', 'HTML', 'CSS'],
+    link: 'https://github.com/DSahir/PriceTracer',
     },
     {
-      title: 'Task Manager App',
-      body: 'A full-stack task management application with user authentication, real-time updates via WebSockets, and drag-and-drop Kanban boards. Users can create projects, assign tasks, set deadlines, and track progress with visual analytics.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'JWT'],
-      link: 'https://github.com/DhanshriAhir/task-manager',
+    title: 'Chat Application',
+    body: 'A real-time chat application with a client-server architecture. Features a responsive web interface built with HTML, CSS, and JavaScript on the client side, paired with a robust backend server for handling message delivery and user communication. The application enables seamless real-time messaging between multiple users with a clean, intuitive interface.',
+    tech: ['JavaScript', 'HTML', 'CSS', 'Node.js'],
+    link: 'https://github.com/DSahir/chat-application',
     },
     {
-      title: 'Weather Dashboard',
-      body: 'An interactive weather dashboard that displays current conditions, 7-day forecasts, and historical trends using the OpenWeatherMap API. Includes geolocation support, city search with autocomplete, and dynamic weather-themed backgrounds.',
-      tech: ['JavaScript', 'REST API', 'Chart.js', 'CSS3'],
-      link: 'https://github.com/DhanshriAhir/weather-dashboard',
+      title: 'Cook Diaries',
+      body: 'A full-stack web application for sharing and discovering recipes. Built with a Node.js and Express backend with MongoDB database models, the application features user authentication, recipe management, and a responsive frontend with HTML, CSS, and JavaScript. The platform enables users to store, organize, and share their favorite cooking recipes with a clean and intuitive interface.',
+      tech: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'HTML', 'CSS'],
+      link: 'https://github.com/DSahir/CookDiaaries',
     },
     {
-      title: 'AI Crop Disease Detector',
-      body: 'A computer vision application that identifies crop diseases from leaf images using a fine-tuned ResNet-50 model. Built during Smart India Hackathon 2023, it supports 15 disease classes across 5 crop types with 94% accuracy.',
-      tech: ['Python', 'PyTorch', 'Flask', 'OpenCV', 'React'],
-      link: 'https://github.com/DhanshriAhir/crop-disease-detector',
+      title: 'Crypto Streaming Pipeline',
+      body: 'Real-time cryptocurrency analytics pipeline for Systems for Data Science course. Ingests live trade data from Coinbase/Binance WebSockets, streams through Apache Kafka, processes into 1-second OHLC candles and volatility metrics with Parquet persistence, serves via FastAPI REST endpoints, and includes interactive Plotly dashboards plus ML trend prediction model.',
+      tech: ['Python', 'FastAPI', 'Apache Kafka', 'Pandas', 'PyArrow', 'Plotly', 'Docker'],
+      link: 'https://github.com/DSahir/CS532_Project',
     },
     {
-      title: 'E-Commerce Platform',
-      body: 'A fully functional e-commerce platform with product catalog, shopping cart, Stripe payment integration, order tracking, and an admin dashboard for inventory management. Features server-side rendering for optimal SEO performance.',
-      tech: ['Next.js', 'PostgreSQL', 'Prisma', 'Stripe', 'Tailwind CSS'],
-      link: 'https://github.com/DhanshriAhir/ecommerce-platform',
+      title: 'Hostel Management System',
+      body: 'Full-stack Django web application for hostel administration with student registration, room allocation, mess management (veg/non-veg options with contractors and daily fees), warden oversight, college info integration, and automated population of demo data including 4 hostels (Vivan, Shiv, Jijau, Riva), 5 rooms per hostel, multiple messes, and chief warden authentication.',
+      tech: ['Python', 'Django', 'MySQL', 'JavaScript', 'CSS', 'HTML'],
+      link: 'https://github.com/DSahir/[hostel-repo-name]',
     },
     {
-      title: 'Real-Time Chat Application',
-      body: 'A real-time messaging application supporting private and group chats, file sharing, message search, and read receipts. Built with a microservices architecture using Docker containers for easy deployment and scaling.',
-      tech: ['React', 'Node.js', 'Socket.io', 'Redis', 'Docker'],
-      link: 'https://github.com/DhanshriAhir/realtime-chat',
+    title: 'Task App API',
+    body: 'A JavaScript-based task management API built with Node.js and MongoDB Atlas backend. The application includes profile picture setup, database integration, and unit testing capabilities using Jest. Designed to manage task operations with persistent data storage and reliable API endpoints.',
+    tech: ['JavaScript', 'Node.js', 'MongoDB', 'Jest'],
+    link: 'https://github.com/DSahir/task-app-api',
     },
+      {
+    title: 'BlogMe',
+    body: 'Full-stack blogging platform built with Node.js, Express, and EJS templating. Features user authentication (registration/login), blog CRUD operations, personal blog dashboard with statistics (max/min/avg ratings, trending blogs), global search by author, reviews/ratings system, and responsive design for reading, writing, and community interaction.',
+    tech: ['Node.js', 'Express', 'EJS', 'JavaScript', 'CSS'],
+    link: 'https://github.com/DSahir/BlogMe',
+  },
   ],
 
   // ---------------------------------------------------------------------------
   // CERTIFICATES - Used in Certificates.jsx
   // ---------------------------------------------------------------------------
   certificates: [
-    { name: 'Certificate Name 1', link: '', logo: '/logos/cert1.png' }, // <-- Replace with your certificates
-    { name: 'Certificate Name 2', link: '', logo: '/logos/cert2.png' },
-  ],
+    { name: 'Neural Networks and Deep Learning', link: 'https://drive.google.com/file/d/17fUm7MxuFlh5_oDq94ta5bA_tj65ETA3/view?usp=sharing', logo: '/logos/coursera.png' }, // <-- Replace with your certificates
+    { name: 'Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization', link: 'https://drive.google.com/file/d/1Kku8bZv5Vc6FY5s8zKUOAOEOZaIpEJQO/view?usp=sharing', logo: '/logos/coursera.png' },
+    { name: 'Structuring Machine Learning Projects', link: 'https://drive.google.com/file/d/13-i_KZS5cy-nsum-x1qILMw50OMxfyM9/view?usp=sharing', logo: '/logos/coursera.png' },
+    { name: 'Cyber Security Foundation', link: 'https://drive.google.com/file/d/1vVTc1oEv9KZukPBfK33cg6ICQG0hLT8p/view?usp=sharing', logo: '/logos/certi-proof.png' },
+    { name: 'SEO Fundamentals Exam', link: 'https://drive.google.com/file/d/11b47UcvZn3GVX_iPG30gLXorgSlPRYHc/view?usp=sharing', logo: '/logos/semrush.png' },
+    ],
 
   // ---------------------------------------------------------------------------
   // NAVIGATION - Used in Header.jsx
