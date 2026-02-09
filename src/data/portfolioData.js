@@ -12,7 +12,7 @@ const portfolioData = {
   personal: {
     name: 'Dhanshri Ahir',
     title: 'Developer',
-    avatarUrl: '/profile-photo.jpg', // Place your photo at public/profile-photo.jpg
+    avatarUrl: import.meta.env.BASE_URL + 'profile-photo.jpg', // Place your photo at public/profile-photo.jpg
     bio: [
       'Hi there <span class="wave-emoji">\u{1F44B}</span>',
       'I am a <span class="bio-highlight-a">graduate</span> student in <span class="bio-highlight-a">Computer Science</span> at the <span class="bio-highlight-a">University of Massachusetts Amherst</span>, and hold a B.Tech in Computer Engineering from the <span class="bio-highlight-a">College of Engineering, Pune</span>.',
@@ -22,11 +22,11 @@ const portfolioData = {
     ],
     email: 'dahir@umass.edu',
     location: 'Massachusetts, USA',
-    resumeUrl: '/resume.pdf', // Place your resume at public/resume.pdf
+    resumeUrl: import.meta.env.BASE_URL + 'resume.pdf', // Place your resume at public/resume.pdf
     socialLinks: {
       linkedin: 'https://linkedin.com/in/dhanshri-ahir',
       github: 'https://github.com/DSAhir',
-      discord: 'https://discord.com/users/dhanshri',
+      discord: 'https://discord.com/users/dsa07365',
     },
   },
 
@@ -96,7 +96,7 @@ const portfolioData = {
           period: 'July 2022 - Dec 2022',
           location: 'Pune, India',
           logo: import.meta.env.BASE_URL + 'logos/finiq.png', // Place logo at public/logos/finiq.png
-          link: '',
+          link: 'https://finiq.com/HomePage/home.html',
           points: [
             'Improved trade message processing performance by 80% by integrating Angular-based front-end systems with a threaded staging table and implementing FIX Protocol solutions in C++ for FX Derivatives and Structured Products trading workflows.',
             'Enhanced reliability and scalability of trading platforms serving 10+ global banking clients by building C#/PL-SQL modules handling XML via REST (~200 requests/min), streamlining dynamic FIX messaging and email-based pricing systems, and contributing to high-level order workflow system design.',
@@ -108,7 +108,7 @@ const portfolioData = {
           period: 'Jan 2022 - June 2022',
           location: 'Pune, India',
           logo: import.meta.env.BASE_URL + 'logos/finiq.png', // Place logo at public/logos/finiq.png
-          link: '',
+          link: 'https://finiq.com/HomePage/home.html',
           points: [
             'Increased user engagement by 20% and reduced navigation time by 30% by redesigning the company\'s web application using React Hooks and Material UI to build dynamic, user-centric interfaces.',
             'Enhanced platform usability by developing reusable dynamic templates (5 pages each) with advanced search autocomplete, related suggestions, and custom theming, delivering faster and more intuitive navigation.',
@@ -143,7 +143,7 @@ const portfolioData = {
           period: '2022',
           location: '',
           logo: import.meta.env.BASE_URL + 'logos/coep.png', // Place logo at public/logos/nlp-research.png
-          link: 'https://drive.google.com/drive/folders/1revTJZGgwTT0bFH1q6d9kHMiHBbK1YS2',
+          link: 'https://drive.google.com/file/d/1wVzOjyNJzigoEWTNx6vTrvJ7c5zOzTyV/view?usp=sharing',
           points: [
             'Led a 3-member team to build an NLP-based interview analysis framework, reducing subjective evaluation bias by applying probabilistic topic modeling (LDA) and topic change point detection on real-world interview transcripts.',
             'Analyzed 138 mock interviews (≈10.5 hours) from 69 MIT students, enabling large-scale conversational insights by performing end-to-end NLP preprocessing including tokenization, lemmatization, stopword removal, and transcript normalization.',
@@ -203,7 +203,7 @@ const portfolioData = {
           period: '',
           location: 'Pune, India',
           logo: import.meta.env.BASE_URL + 'logos/absa.png', // Place logo at public/logos/absa.png
-          link: 'https://www.anjalibhagwat.com/projects',
+          link: 'https://www.anjalibhagwat.com',
           points: [
             'Trained at ABSA – Anjali Bhagwat Shooting Academy, Pune, in 10m air rifle basics, safety, posture, and precision shooting techniques under structured coaching.',
             'Practiced under the mentorship framework established by 3-time Olympian and former world no. 1 rifle shooter Anjali Bhagwat, focusing on discipline, consistency, and competition-oriented training.',
@@ -234,6 +234,12 @@ const portfolioData = {
     tech: ['JavaScript', 'React', 'Node.js', 'HTML', 'CSS'],
     link: 'https://github.com/DSahir/PriceTracer',
     },
+     {
+      title: 'Crypto Streaming Pipeline',
+      body: 'Real-time cryptocurrency analytics pipeline for Systems for Data Science course. Ingests live trade data from Coinbase/Binance WebSockets, streams through Apache Kafka, processes into 1-second OHLC candles and volatility metrics with Parquet persistence, serves via FastAPI REST endpoints, and includes interactive Plotly dashboards plus ML trend prediction model.',
+      tech: ['Python', 'FastAPI', 'Apache Kafka', 'Pandas', 'PyArrow', 'Plotly', 'Docker'],
+      link: 'https://github.com/DSahir/CS532_Project',
+    },
     {
     title: 'Chat Application',
     body: 'A real-time chat application with a client-server architecture. Features a responsive web interface built with HTML, CSS, and JavaScript on the client side, paired with a robust backend server for handling message delivery and user communication. The application enables seamless real-time messaging between multiple users with a clean, intuitive interface.',
@@ -247,18 +253,6 @@ const portfolioData = {
       link: 'https://github.com/DSahir/CookDiaaries',
     },
     {
-      title: 'Crypto Streaming Pipeline',
-      body: 'Real-time cryptocurrency analytics pipeline for Systems for Data Science course. Ingests live trade data from Coinbase/Binance WebSockets, streams through Apache Kafka, processes into 1-second OHLC candles and volatility metrics with Parquet persistence, serves via FastAPI REST endpoints, and includes interactive Plotly dashboards plus ML trend prediction model.',
-      tech: ['Python', 'FastAPI', 'Apache Kafka', 'Pandas', 'PyArrow', 'Plotly', 'Docker'],
-      link: 'https://github.com/DSahir/CS532_Project',
-    },
-    {
-      title: 'Hostel Management System',
-      body: 'Full-stack Django web application for hostel administration with student registration, room allocation, mess management (veg/non-veg options with contractors and daily fees), warden oversight, college info integration, and automated population of demo data including 4 hostels (Vivan, Shiv, Jijau, Riva), 5 rooms per hostel, multiple messes, and chief warden authentication.',
-      tech: ['Python', 'Django', 'MySQL', 'JavaScript', 'CSS', 'HTML'],
-      link: 'https://github.com/DSahir/[hostel-repo-name]',
-    },
-    {
     title: 'Task App API',
     body: 'A JavaScript-based task management API built with Node.js and MongoDB Atlas backend. The application includes profile picture setup, database integration, and unit testing capabilities using Jest. Designed to manage task operations with persistent data storage and reliable API endpoints.',
     tech: ['JavaScript', 'Node.js', 'MongoDB', 'Jest'],
@@ -270,6 +264,13 @@ const portfolioData = {
     tech: ['Node.js', 'Express', 'EJS', 'JavaScript', 'CSS'],
     link: 'https://github.com/DSahir/BlogMe',
   },
+       
+    // {
+    //   title: 'Hostel Management System',
+    //   body: 'Full-stack Django web application for hostel administration with student registration, room allocation, mess management (veg/non-veg options with contractors and daily fees), warden oversight, college info integration, and automated population of demo data including 4 hostels (Vivan, Shiv, Jijau, Riva), 5 rooms per hostel, multiple messes, and chief warden authentication.',
+    //   tech: ['Python', 'Django', 'MySQL', 'JavaScript', 'CSS', 'HTML'],
+    //   link: 'https://github.com/DSahir/Hostel-management',
+    // },
   ],
 
   // ---------------------------------------------------------------------------
@@ -280,7 +281,7 @@ const portfolioData = {
     { name: 'Improving Deep Neural Networks', link: 'https://drive.google.com/file/d/1Kku8bZv5Vc6FY5s8zKUOAOEOZaIpEJQO/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/coursera.png' },
     { name: 'Structuring Machine Learning Projects', link: 'https://drive.google.com/file/d/13-i_KZS5cy-nsum-x1qILMw50OMxfyM9/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/coursera.png' },
     { name: 'Cyber Security Foundation', link: 'https://drive.google.com/file/d/1vVTc1oEv9KZukPBfK33cg6ICQG0hLT8p/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/certi-proof.png' },
-    { name: 'SEO Fundamentals Exam', link: 'https://drive.google.com/file/d/11b47UcvZn3GVX_iPG30gLXorgSlPRYHc/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/semrush.png' },
+    { name: 'SEO Fundamentals Exam', link: 'https://drive.google.com/file/d/1LxF38TmQgO1cWwrfA7AUToqDj56mHBZS/view?usp=sharing', logo: import.meta.env.BASE_URL + 'logos/semrush.png' },
     ],
 
   // ---------------------------------------------------------------------------
