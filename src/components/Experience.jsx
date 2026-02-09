@@ -63,21 +63,6 @@ function Experience() {
                     <div key={index} className="timeline-item">
                       <div className="timeline-dot" />
                       <div className="timeline-content card exp-card">
-                        {item.link && (
-                          <a
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="institution-link"
-                            title={`Visit ${item.organization}`}
-                          >
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                              <polyline points="15 3 21 3 21 9" />
-                              <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                          </a>
-                        )}
                         <div className="exp-card-layout">
                           <div className="exp-card-main">
                             <span className="timeline-year">{item.period}</span>
@@ -89,23 +74,40 @@ function Experience() {
                                   className="card-logo"
                                 />
                               )}
-                              <h3>{item.role}</h3>
+                              <div>
+                                <h3>{item.role}</h3>
+                                <p className="timeline-institution">{item.organization}</p>
+                              </div>
                             </div>
-                            <p className="timeline-institution">{item.organization}</p>
                             <ul className="experience-list">
                               {item.points.map((point, i) => (
                                 <li key={i}>{point}</li>
                               ))}
                             </ul>
                           </div>
-                          {item.location && (
-                            <div className="exp-card-side">
+                          <div className="exp-card-side">
+                            {item.link && (
+                              <a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="side-link-icon"
+                                title={`Visit ${item.organization}`}
+                              >
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                  <polyline points="15 3 21 3 21 9" />
+                                  <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                              </a>
+                            )}
+                            {item.location && (
                               <div className="exp-side-item">
                                 <span className="exp-side-icon">📍</span>
                                 <span className="exp-side-text">{item.location}</span>
                               </div>
-                            </div>
-                          )}
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>

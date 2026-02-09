@@ -10,7 +10,11 @@ const { personal } = portfolioData;
 // 2. Create a new form and copy your form ID (e.g. "xpzvqkdl")
 // 3. Replace the FORMSPREE_ID below with your form ID
 // -----------------------------------------------------------------------
-const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // <-- Replace with your Formspree form ID
+// -----------------------------------------------------------------------
+// Option A: Set your Formspree ID for async form delivery
+// Option B: Leave empty to use mailto fallback (opens user's email client)
+// -----------------------------------------------------------------------
+const FORMSPREE_ID = ''; // <-- Replace with your Formspree form ID (e.g. "xpzvqkdl")
 
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -22,6 +26,19 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // If no Formspree ID is set, fall back to mailto
+    if (!FORMSPREE_ID) {
+      const subject = encodeURIComponent(`Message from ${form.name}`);
+      const body = encodeURIComponent(
+        `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+      );
+      window.open(`mailto:${personal.email}?subject=${subject}&body=${body}`, '_self');
+      setStatus('success');
+      setForm({ name: '', email: '', message: '' });
+      return;
+    }
+
     setStatus('sending');
 
     try {
