@@ -277,7 +277,7 @@ const portfolioData = {
   // ---------------------------------------------------------------------------
   certificates: [
     { name: 'Neural Networks and Deep Learning', link: 'https://drive.google.com/file/d/17fUm7MxuFlh5_oDq94ta5bA_tj65ETA3/view?usp=sharing', logo: '/logos/coursera.png' }, // <-- Replace with your certificates
-    { name: 'Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization', link: 'https://drive.google.com/file/d/1Kku8bZv5Vc6FY5s8zKUOAOEOZaIpEJQO/view?usp=sharing', logo: '/logos/coursera.png' },
+    { name: 'Improving Deep Neural Networks', link: 'https://drive.google.com/file/d/1Kku8bZv5Vc6FY5s8zKUOAOEOZaIpEJQO/view?usp=sharing', logo: '/logos/coursera.png' },
     { name: 'Structuring Machine Learning Projects', link: 'https://drive.google.com/file/d/13-i_KZS5cy-nsum-x1qILMw50OMxfyM9/view?usp=sharing', logo: '/logos/coursera.png' },
     { name: 'Cyber Security Foundation', link: 'https://drive.google.com/file/d/1vVTc1oEv9KZukPBfK33cg6ICQG0hLT8p/view?usp=sharing', logo: '/logos/certi-proof.png' },
     { name: 'SEO Fundamentals Exam', link: 'https://drive.google.com/file/d/11b47UcvZn3GVX_iPG30gLXorgSlPRYHc/view?usp=sharing', logo: '/logos/semrush.png' },
