@@ -138,62 +138,50 @@ body {
 }
 
 [data-theme="light"] body {
-  background: linear-gradient(135deg,
-    #f0ecfe,  /* lavender - about */
-    #ecfafe,  /* cyan - education */
-    #fef7ec,  /* amber - experience */
-    #feecf4,  /* pink - projects */
-    #ecfef4,  /* green - contact */
-    #fefbec,  /* yellow - certificates */
-    #f0ecfe   /* lavender wrap */
-  );
-  background-size: 700% 700%;
-  animation: lightColorCycle 42s ease-in-out infinite;
+  background: var(--bg-primary);
 }
 
-@keyframes lightColorCycle {
-  0%, 100% {
-    background-position: 0% 50%;
-    opacity: 1;
-  }
-  8% {
-    opacity: 0.85;
-  }
-  16.67% {
-    background-position: 20% 80%;
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.85;
-  }
-  33.33% {
-    background-position: 50% 20%;
-    opacity: 1;
-  }
-  41% {
-    opacity: 0.85;
-  }
-  50% {
-    background-position: 80% 80%;
-    opacity: 1;
-  }
-  58% {
-    opacity: 0.85;
-  }
-  66.67% {
-    background-position: 100% 40%;
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.85;
-  }
-  83.33% {
-    background-position: 60% 100%;
-    opacity: 1;
-  }
-  91% {
-    opacity: 0.85;
-  }
+/* Light theme: cycling pastel colors on mouse-following blobs */
+[data-theme="light"] .mouse-gradient-blob {
+  opacity: 0.28;
+  filter: blur(100px);
+  animation: blobFade 7s ease-in-out infinite;
+}
+
+[data-theme="light"] .mouse-gradient-blob--primary {
+  background: #a78bfa;
+  width: 700px;
+  height: 700px;
+  animation: blobColorCycle 42s ease-in-out infinite, blobFade 7s ease-in-out infinite;
+}
+
+[data-theme="light"] .mouse-gradient-blob--secondary {
+  background: #fbbf24;
+  width: 600px;
+  height: 600px;
+  animation: blobColorCycle 42s ease-in-out -14s infinite, blobFade 7s ease-in-out -2.3s infinite;
+}
+
+[data-theme="light"] .mouse-gradient-blob--tertiary {
+  background: #63d0a5;
+  width: 500px;
+  height: 500px;
+  animation: blobColorCycle 42s ease-in-out -28s infinite, blobFade 7s ease-in-out -4.6s infinite;
+}
+
+@keyframes blobColorCycle {
+  0%, 12%       { background-color: #a78bfa; }  /* lavender */
+  16.67%, 28.5% { background-color: #67e8f9; }  /* cyan */
+  33.33%, 45.2% { background-color: #fbbf24; }  /* amber */
+  50%, 62%      { background-color: #f472b6; }  /* pink */
+  66.67%, 78.5% { background-color: #63d0a5; }  /* green */
+  83.33%, 95.2% { background-color: #facc15; }  /* yellow */
+  100%          { background-color: #a78bfa; }  /* lavender wrap */
+}
+
+@keyframes blobFade {
+  0%, 100% { opacity: 0.28; }
+  50%      { opacity: 0.15; }
 }
 
 [data-theme="glass"] body {
@@ -223,25 +211,7 @@ body {
   will-change: transform;
 }
 
-[data-theme="light"] .mouse-gradient-blob {
-  opacity: 0.25;
-  filter: blur(100px);
-}
-
-[data-theme="light"] .mouse-gradient-blob--primary {
-  width: 700px;
-  height: 700px;
-}
-
-[data-theme="light"] .mouse-gradient-blob--secondary {
-  width: 600px;
-  height: 600px;
-}
-
-[data-theme="light"] .mouse-gradient-blob--tertiary {
-  width: 500px;
-  height: 500px;
-}
+/* Light theme blob base overrides are above with color cycling */
 
 .mouse-gradient-blob--primary {
   background: radial-gradient(circle, #a78bfa 0%, transparent 70%);

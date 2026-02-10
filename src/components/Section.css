@@ -392,6 +392,17 @@
   margin-bottom: 8px;
 }
 
+/* Institution/organization text: lighter shade of section title color */
+.section-education .timeline-institution {
+  color: var(--color-education);
+  opacity: 0.65;
+}
+
+.section-experience .timeline-institution {
+  color: var(--color-experience);
+  opacity: 0.65;
+}
+
 .edu-minor {
   font-size: 0.88rem;
   color: var(--color-education);
@@ -798,7 +809,7 @@
 /* Experience list */
 .experience-list {
   margin: 12px 0 0;
-  padding-left: 68px;
+  padding-left: 18px;
   color: var(--text-muted);
   line-height: 1.8;
   font-size: 0.93rem;
