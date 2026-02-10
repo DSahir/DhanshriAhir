@@ -25,22 +25,22 @@
 
 .header-logo {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 900;
   text-decoration: none;
-  letter-spacing: -0.3px;
+  letter-spacing: 0.0018em;
   display: flex;
   align-items: center;
   gap: 0;
 }
 
-.logo-bracket {
-  color: #a855f7;
-  font-weight: 400;
-  font-family: 'Courier New', monospace;
-}
-
-.logo-name {
-  display: inline-flex;
+.logo-text {
+  background: linear-gradient(135deg, #b8a9e8, #f5b7a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  letter-spacing: 0.0018em;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .header-right {

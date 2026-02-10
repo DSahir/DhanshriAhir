@@ -21,3 +21,8 @@
   position: relative;
   z-index: 1;
 }
+
+.footer-heart {
+  color: #e94560;
+  font-size: 1rem;
+}

@@ -137,6 +137,65 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+[data-theme="light"] body {
+  background: linear-gradient(135deg,
+    #f0ecfe,  /* lavender - about */
+    #ecfafe,  /* cyan - education */
+    #fef7ec,  /* amber - experience */
+    #feecf4,  /* pink - projects */
+    #ecfef4,  /* green - contact */
+    #fefbec,  /* yellow - certificates */
+    #f0ecfe   /* lavender wrap */
+  );
+  background-size: 700% 700%;
+  animation: lightColorCycle 42s ease-in-out infinite;
+}
+
+@keyframes lightColorCycle {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 1;
+  }
+  8% {
+    opacity: 0.85;
+  }
+  16.67% {
+    background-position: 20% 80%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.85;
+  }
+  33.33% {
+    background-position: 50% 20%;
+    opacity: 1;
+  }
+  41% {
+    opacity: 0.85;
+  }
+  50% {
+    background-position: 80% 80%;
+    opacity: 1;
+  }
+  58% {
+    opacity: 0.85;
+  }
+  66.67% {
+    background-position: 100% 40%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.85;
+  }
+  83.33% {
+    background-position: 60% 100%;
+    opacity: 1;
+  }
+  91% {
+    opacity: 0.85;
+  }
+}
+
 [data-theme="glass"] body {
   background: linear-gradient(135deg, #F7F9FC 0%, #EDEFF5 100%);
 }
