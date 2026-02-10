@@ -106,7 +106,7 @@
 .avatar-degree-secondary {
   text-align: center;
   margin-top: 2px;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--color-education);
   letter-spacing: -0.1px;
@@ -174,13 +174,13 @@
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  border: 1px solid var(--glass-border);
-  color: var(--text-secondary);
+  border: 1px solid var(--color-about);
+  color: var(--color-about);
   background: var(--bg-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   text-decoration: none;
-  transition: color 0.2s, border-color 0.2s, transform 0.2s, background 0.2s;
+  transition: color 0.2s, border-color 0.2s, transform 0.2s, background 0.2s, box-shadow 0.2s;
 }
 
 .social-icon:hover {
@@ -188,6 +188,7 @@
   border-color: var(--color-about);
   background: var(--color-about-bg);
   transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(167, 139, 250, 0.4);
 }
 
 .resume-btn {
@@ -339,6 +340,7 @@
   color: var(--color-experience);
   border-color: var(--color-experience);
   background: var(--color-experience-bg);
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.4);
 }
 
 /* Experience card two-column layout */
@@ -410,7 +412,6 @@
   font-weight: 700;
   font-style: italic;
   margin: 0 0 4px;
-  opacity: 0.9;
 }
 
 /* Education card with top-right link icon */
@@ -554,13 +555,13 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  color: var(--text-faint);
-  border: 1px solid var(--glass-border);
+  color: var(--color-certificates);
+  border: 1px solid var(--color-certificates);
   background: var(--bg-card);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   flex-shrink: 0;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s, box-shadow 0.2s;
   text-decoration: none;
 }
 
@@ -568,6 +569,7 @@
   color: var(--color-certificates);
   border-color: var(--color-certificates);
   background: var(--color-certificates-bg);
+  box-shadow: 0 0 16px rgba(250, 204, 21, 0.4);
 }
 
 .section-certificates .card:hover {
@@ -590,19 +592,20 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--color-education);
   background: var(--bg-card);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color: var(--text-faint);
+  color: var(--color-education);
   text-decoration: none;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s, box-shadow 0.2s;
 }
 
 .section-education .institution-link:hover {
   color: var(--color-education);
   border-color: var(--color-education);
   background: var(--color-education-bg);
+  box-shadow: 0 0 16px rgba(103, 232, 249, 0.4);
 }
 
 /* Inline institution link (inside side column, not absolutely positioned) */
@@ -613,26 +616,37 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  border: 1px solid var(--glass-border);
   background: var(--bg-card);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color: var(--text-faint);
   text-decoration: none;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s, box-shadow 0.2s;
   align-self: flex-end;
+}
+
+/* Default colors per section */
+.section-education .institution-link-inline {
+  color: var(--color-education);
+  border: 1px solid var(--color-education);
+}
+
+.section-experience .institution-link-inline {
+  color: var(--color-experience);
+  border: 1px solid var(--color-experience);
 }
 
 .section-education .institution-link-inline:hover {
   color: var(--color-education);
   border-color: var(--color-education);
   background: var(--color-education-bg);
+  box-shadow: 0 0 16px rgba(103, 232, 249, 0.4);
 }
 
 .section-experience .institution-link-inline:hover {
   color: var(--color-experience);
   border-color: var(--color-experience);
   background: var(--color-experience-bg);
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.4);
 }
 
 .timeline-content p {
@@ -851,13 +865,13 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  color: var(--text-faint);
-  border: 1px solid var(--glass-border);
+  color: var(--color-projects);
+  border: 1px solid var(--color-projects);
   background: var(--bg-card);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   flex-shrink: 0;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s, box-shadow 0.2s;
   text-decoration: none;
 }
 
@@ -865,6 +879,7 @@
   color: var(--color-projects);
   border-color: var(--color-projects);
   background: var(--color-projects-bg);
+  box-shadow: 0 0 16px rgba(244, 114, 182, 0.4);
 }
 
 .project-body {
