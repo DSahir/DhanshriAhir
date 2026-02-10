@@ -49,10 +49,9 @@ const portfolioData = {
       link: 'https://www.cics.umass.edu/',
     },
     {
-      degree: 'College of Engineering, Pune',
-      field: 'Bachelor of Technology in Computer Engineering',
-      minor: 'Minor in Mathematics with Specialization in Financial Engineering',
+      degree: 'Bachelor of Technology in Computer Engineering',
       institution: 'College of Engineering, Pune',
+      minor: 'Minor in Mathematics with Specialization in Financial Engineering',
       year: 'Graduated : 2022',
       location: 'Pune, India',
       gpa: '8.79/10',

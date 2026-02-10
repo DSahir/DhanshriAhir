@@ -137,6 +137,53 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+[data-theme="light"] body {
+  background: var(--bg-primary);
+}
+
+/* Light theme: cycling pastel colors on mouse-following blobs */
+[data-theme="light"] .mouse-gradient-blob {
+  opacity: 0.28;
+  filter: blur(100px);
+  animation: blobFade 7s ease-in-out infinite;
+}
+
+[data-theme="light"] .mouse-gradient-blob--primary {
+  background: #dfd4fd;
+  width: 700px;
+  height: 700px;
+  animation: blobColorCycle 42s ease-in-out infinite, blobFade 7s ease-in-out infinite;
+}
+
+[data-theme="light"] .mouse-gradient-blob--secondary {
+  background: #feecbe;
+  width: 600px;
+  height: 600px;
+  animation: blobColorCycle 42s ease-in-out -14s infinite, blobFade 7s ease-in-out -2.3s infinite;
+}
+
+[data-theme="light"] .mouse-gradient-blob--tertiary {
+  background: #dcf4eb;
+  width: 500px;
+  height: 500px;
+  animation: blobColorCycle 42s ease-in-out -28s infinite, blobFade 7s ease-in-out -4.6s infinite;
+}
+
+@keyframes blobColorCycle {
+  0%, 12%       { background-color: #dfd4fd; }  /* lavender */
+  16.67%, 28.5% { background-color: #c5f6fd; }  /* cyan */
+  33.33%, 45.2% { background-color: #ffb700b3; }  /* amber */
+  50%, 62%      { background-color: #fbcde5; }  /* pink */
+  66.67%, 78.5% { background-color: #dcf4eb; }  /* green */
+  83.33%, 95.2% { background-color: #fef2c2; }  /* yellow */
+  100%          { background-color: #a78bfa94; }  /* lavender wrap */
+}
+
+@keyframes blobFade {
+  0%, 100% { opacity: 0.28; }
+  50%      { opacity: 0.15; }
+}
+
 [data-theme="glass"] body {
   background: linear-gradient(135deg, #F7F9FC 0%, #EDEFF5 100%);
 }
@@ -164,25 +211,7 @@ body {
   will-change: transform;
 }
 
-[data-theme="light"] .mouse-gradient-blob {
-  opacity: 0.25;
-  filter: blur(100px);
-}
-
-[data-theme="light"] .mouse-gradient-blob--primary {
-  width: 700px;
-  height: 700px;
-}
-
-[data-theme="light"] .mouse-gradient-blob--secondary {
-  width: 600px;
-  height: 600px;
-}
-
-[data-theme="light"] .mouse-gradient-blob--tertiary {
-  width: 500px;
-  height: 500px;
-}
+/* Light theme blob base overrides are above with color cycling */
 
 .mouse-gradient-blob--primary {
   background: radial-gradient(circle, #a78bfa 0%, transparent 70%);

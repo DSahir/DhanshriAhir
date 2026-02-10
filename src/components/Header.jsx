@@ -5,10 +5,7 @@ import './Header.css';
 
 const { personal } = portfolioData;
 
-const logoColors = [
-  '#a855f7',
-  '#ec4899',
-];
+// Logo uses CSS gradient via background-clip: text
 
 const navItems = [
   { name: 'About', colorClass: 'nav-about' },
@@ -32,15 +29,7 @@ function Header({ activeSection, onNavigate }) {
     <header className="header">
       <div className="header-container">
         <a className="header-logo" href="#about" onClick={() => handleClick('About')}>
-          <span className="logo-bracket">&lt;</span>
-          <span className="logo-name">
-            {personal.name.split('').map((ch, i) => (
-              <span key={i} style={{ color: ch === ' ' ? 'transparent' : logoColors[i % logoColors.length] }}>
-                {ch === ' ' ? '\u00A0' : ch}
-              </span>
-            ))}
-          </span>
-          <span className="logo-bracket"> /&gt;</span>
+          <span className="logo-text">&lt; Dhanshri/&gt;</span>
         </a>
         <div className="header-right">
           <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
