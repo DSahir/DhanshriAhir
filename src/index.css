@@ -89,7 +89,7 @@ html {
 
 }
 
-/* Pastel Glassmorphism theme */
+/* Pastel Glassmorphism theme — DISABLED
 [data-theme="glass"] {
   --bg-primary: #F7F9FC;
   --bg-secondary: #EDEFF5;
@@ -112,7 +112,6 @@ html {
   --blur: 16px;
   --input-bg: rgba(255, 255, 255, 0.55);
 
-  /* Pastel section colors (glass mode) */
   --color-about: #9b7ad8;
   --color-about-bg: rgba(230, 223, 246, 0.35);
   --color-education: #5ba8c8;
@@ -126,6 +125,7 @@ html {
   --color-certificates: #c49520;
   --color-certificates-bg: rgba(251, 227, 215, 0.35);
 }
+*/
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -184,9 +184,11 @@ body {
   50%      { opacity: 0.15; }
 }
 
+/* Glass theme body — DISABLED
 [data-theme="glass"] body {
   background: linear-gradient(135deg, #F7F9FC 0%, #EDEFF5 100%);
 }
+*/
 
 /* Interactive mouse-following gradient blob */
 .mouse-gradient {
@@ -261,7 +263,7 @@ body {
   box-shadow: 0 0 16px rgba(124, 58, 237, 0.12), 0 0 16px rgba(8, 145, 178, 0.12);
 }
 
-/* Glass theme overrides */
+/* Glass theme overrides — DISABLED
 [data-theme="glass"] .header {
   background: linear-gradient(135deg, rgba(230,223,246,0.5), rgba(220,234,247,0.5));
   backdrop-filter: blur(16px) saturate(120%);
@@ -321,7 +323,6 @@ body {
   height: 500px;
 }
 
-/* Glass theme card hover glows */
 [data-theme="glass"] .section-about .card:hover {
   border-color: rgba(230, 223, 246, 0.6);
   box-shadow: 0 0 28px rgba(230, 223, 246, 0.3), 0 8px 40px var(--glass-shadow);
@@ -350,3 +351,4 @@ body {
   border-color: rgba(251, 227, 215, 0.6);
   box-shadow: 0 0 24px rgba(251, 227, 215, 0.25), 0 4px 24px var(--glass-shadow);
 }
+*/

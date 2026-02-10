@@ -98,7 +98,7 @@
   text-align: center;
   margin-top: 4px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-about);
   letter-spacing: -0.1px;
 }
@@ -298,7 +298,7 @@
 
 .timeline-content h3 {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-primary);
   margin: 4px 0;
   letter-spacing: -0.2px;
@@ -324,7 +324,7 @@
   height: 56px;
   border-radius: 8px;
   object-fit: contain;
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--glass-border);
   padding: 4px;
   flex-shrink: 0;
@@ -382,13 +382,14 @@
 .timeline-content h4 {
   font-size: 0.95rem;
   color: var(--text-secondary);
-  font-weight: 500;
+  font-weight: 700;
   margin: 0 0 4px;
 }
 
 .timeline-institution {
   font-size: 0.85rem;
   color: var(--text-faint);
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
@@ -406,7 +407,7 @@
 .edu-minor {
   font-size: 0.88rem;
   color: var(--color-education);
-  font-weight: 500;
+  font-weight: 700;
   font-style: italic;
   margin: 0 0 4px;
   opacity: 0.9;
@@ -533,7 +534,7 @@
   height: 48px;
   border-radius: 8px;
   object-fit: contain;
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--glass-border);
   padding: 2px;
   flex-shrink: 0;
@@ -541,7 +542,7 @@
 
 .cert-name {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-certificates);
   letter-spacing: -0.2px;
 }
@@ -740,7 +741,7 @@
   cursor: pointer;
   color: var(--text-primary);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   font-family: inherit;
   letter-spacing: -0.2px;
   text-align: left;
@@ -778,12 +779,12 @@
 .exp-category-body {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
+  transition: max-height 0.5s ease, padding 0.3s ease;
   padding: 0 24px;
 }
 
 .exp-category-body.open {
-  max-height: 2000px;
+  max-height: 5000px;
   padding: 8px 24px 24px;
 }
 
@@ -837,7 +838,7 @@
 .project-card-header h3 {
   color: var(--color-projects);
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.2px;
   flex: 1;
   margin-right: 12px;
@@ -902,7 +903,7 @@
 .contact-info h3 {
   color: var(--color-contact);
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 12px;
   letter-spacing: -0.2px;
 }
@@ -1015,6 +1016,10 @@
 
 /* ======== Responsive ======== */
 @media (max-width: 768px) {
+  .section {
+    padding: 40px 12px;
+  }
+
   .about-content {
     flex-direction: column;
     text-align: center;
@@ -1032,6 +1037,7 @@
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    flex-wrap: wrap;
   }
 
   .exp-card-layout {
@@ -1042,6 +1048,69 @@
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* Collapsible experience sections — ensure full visibility on mobile */
+  .exp-category-header {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+
+  .exp-category-body {
+    padding: 0 12px;
+  }
+
+  .exp-category-body.open {
+    max-height: none;
+    padding: 8px 12px 20px;
+    overflow: visible;
+  }
+
+  .exp-collapsed-preview {
+    padding: 0 16px 12px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-dot {
+    left: -24px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline::before {
+    left: 5px;
+  }
+
+  .card {
+    padding: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .experience-list {
+    padding-left: 14px;
+    font-size: 0.88rem;
+  }
+
+  .card-title-row {
+    flex-wrap: wrap;
+  }
+
+  .edu-coursework-list {
+    gap: 4px;
+  }
+
+  .edu-coursework-list li {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-wrapper {

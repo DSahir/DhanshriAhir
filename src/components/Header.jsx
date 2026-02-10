@@ -54,8 +54,6 @@ function Header({ activeSection, onNavigate }) {
             title={
               theme === 'dark'
                 ? 'Switch to light mode'
-                : theme === 'light'
-                ? 'Switch to glass mode'
                 : 'Switch to dark mode'
             }
           >
@@ -70,12 +68,6 @@ function Header({ activeSection, onNavigate }) {
                 <line x1="21" y1="12" x2="23" y2="12" />
                 <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
                 <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-              </svg>
-            ) : theme === 'light' ? (
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                <path d="M2 17l10 5 10-5" />
-                <path d="M2 12l10 5 10-5" />
               </svg>
             ) : (
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
