@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Original unoptimized images
+profile-photo-original.jpg
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

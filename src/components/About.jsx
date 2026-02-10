@@ -73,6 +73,10 @@ function About() {
               className="avatar-image"
               src={personal.avatarUrl}
               alt={personal.name}
+              width="230"
+              height="230"
+              loading="eager"
+              fetchPriority="high"
             />
             <p className="avatar-name">{personal.name}</p>
             <p className="avatar-degree">Masters in Computer Science</p>
