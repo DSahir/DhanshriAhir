@@ -74,7 +74,7 @@ function App() {
           <Contact />
         </main>
         <footer className="footer">
-          <p>&copy; 2026 {personal.name}. All rights reserved.</p>
+          <p>Made with <span role="img" aria-label="love" style={{ color: '#e94560' }}>{'\u2764\uFE0F'}</span> by Dhanshri</p>
         </footer>
       </div>
     </ThemeProvider>

@@ -34,6 +34,11 @@ html {
   --blur: 20px;
   --input-bg: rgba(255, 255, 255, 0.04);
 
+  /* Logo gradient colors */
+  --mint: #67e8f9;
+  --lavender: #a78bfa;
+  --peach: #f472b6;
+
   /* Pastel section colors (dark mode) */
   --color-about: #a78bfa;
   --color-about-bg: rgba(167, 139, 250, 0.06);
@@ -73,6 +78,11 @@ html {
   --blur: 20px;
   --input-bg: rgba(255, 255, 255, 0.6);
 
+  /* Logo gradient colors */
+  --mint: #0891b2;
+  --lavender: #7c3aed;
+  --peach: #db2777;
+
   /* Pastel section colors (light mode) */
   --color-about: #7c3aed;
   --color-about-bg: rgba(124, 58, 237, 0.06);
@@ -111,6 +121,11 @@ html {
   --timeline-line: rgba(220, 234, 247, 0.6);
   --blur: 16px;
   --input-bg: rgba(255, 255, 255, 0.55);
+
+  /* Logo gradient colors */
+  --mint: #5ba8c8;
+  --lavender: #9b7ad8;
+  --peach: #d06090;
 
   /* Pastel section colors (glass mode) */
   --color-about: #9b7ad8;
@@ -165,23 +180,54 @@ body {
 }
 
 [data-theme="light"] .mouse-gradient-blob {
-  opacity: 0.25;
-  filter: blur(100px);
+  opacity: 0.3;
+  filter: blur(160px);
 }
 
 [data-theme="light"] .mouse-gradient-blob--primary {
-  width: 700px;
-  height: 700px;
+  width: 800px;
+  height: 800px;
+  animation: lightColorCyclePrimary 30s ease-in-out infinite;
 }
 
 [data-theme="light"] .mouse-gradient-blob--secondary {
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
+  animation: lightColorCycleSecondary 30s ease-in-out infinite;
 }
 
 [data-theme="light"] .mouse-gradient-blob--tertiary {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
+  animation: lightColorCycleTertiary 30s ease-in-out infinite;
+}
+
+/* Cycling pastel colors for light theme — each keyframe step ~5s (100%/6 steps) */
+@keyframes lightColorCyclePrimary {
+  0%, 100% { background: radial-gradient(circle, #7c3aed 0%, transparent 70%); }    /* about purple */
+  16.6%    { background: radial-gradient(circle, #0891b2 0%, transparent 70%); }    /* education teal */
+  33.3%    { background: radial-gradient(circle, #d97706 0%, transparent 70%); }    /* experience amber */
+  50%      { background: radial-gradient(circle, #db2777 0%, transparent 70%); }    /* projects pink */
+  66.6%    { background: radial-gradient(circle, #059669 0%, transparent 70%); }    /* contact green */
+  83.3%    { background: radial-gradient(circle, #ca8a04 0%, transparent 70%); }    /* certificates gold */
+}
+
+@keyframes lightColorCycleSecondary {
+  0%, 100% { background: radial-gradient(circle, #db2777 0%, transparent 70%); }    /* projects pink */
+  16.6%    { background: radial-gradient(circle, #059669 0%, transparent 70%); }    /* contact green */
+  33.3%    { background: radial-gradient(circle, #7c3aed 0%, transparent 70%); }    /* about purple */
+  50%      { background: radial-gradient(circle, #ca8a04 0%, transparent 70%); }    /* certificates gold */
+  66.6%    { background: radial-gradient(circle, #0891b2 0%, transparent 70%); }    /* education teal */
+  83.3%    { background: radial-gradient(circle, #d97706 0%, transparent 70%); }    /* experience amber */
+}
+
+@keyframes lightColorCycleTertiary {
+  0%, 100% { background: radial-gradient(circle, #059669 0%, transparent 70%); }    /* contact green */
+  16.6%    { background: radial-gradient(circle, #d97706 0%, transparent 70%); }    /* experience amber */
+  33.3%    { background: radial-gradient(circle, #db2777 0%, transparent 70%); }    /* projects pink */
+  50%      { background: radial-gradient(circle, #0891b2 0%, transparent 70%); }    /* education teal */
+  66.6%    { background: radial-gradient(circle, #ca8a04 0%, transparent 70%); }    /* certificates gold */
+  83.3%    { background: radial-gradient(circle, #7c3aed 0%, transparent 70%); }    /* about purple */
 }
 
 .mouse-gradient-blob--primary {

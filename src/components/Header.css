@@ -24,23 +24,29 @@
 }
 
 .header-logo {
-  font-size: 1.2rem;
-  font-weight: 700;
   text-decoration: none;
-  letter-spacing: -0.3px;
   display: flex;
   align-items: center;
-  gap: 0;
 }
 
-.logo-bracket {
-  color: #a855f7;
-  font-weight: 400;
-  font-family: 'Courier New', monospace;
-}
-
-.logo-name {
-  display: inline-flex;
+.glass-two {
+  font-family: "SF Pro Rounded", "SF Pro Display", "Poppins", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.3rem;
+  letter-spacing: 0.18em;
+  background: linear-gradient(
+    90deg,
+    var(--mint),
+    var(--lavender),
+    var(--peach)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow:
+    0 2px 6px rgba(255,255,255,0.25),
+    0 14px 40px rgba(0,0,0,0.12);
 }
 
 .header-right {

@@ -74,7 +74,7 @@ function About() {
               src={personal.avatarUrl}
               alt={personal.name}
             />
-            <p className="avatar-email">{personal.email}</p>
+            <p className="avatar-email">{personal.name}</p>
             <p className="avatar-degree">Masters in Computer Science</p>
             <p className="avatar-degree-secondary">BTech in Computer Engineering</p>
           </div>
