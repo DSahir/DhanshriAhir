@@ -395,12 +395,12 @@
 /* Institution/organization text: lighter shade of section title color */
 .section-education .timeline-institution {
   color: var(--color-education);
-  opacity: 0.65;
+  opacity: 0.8;
 }
 
 .section-experience .timeline-institution {
   color: var(--color-experience);
-  opacity: 0.65;
+  opacity: 0.8;
 }
 
 .edu-minor {
@@ -409,7 +409,7 @@
   font-weight: 500;
   font-style: italic;
   margin: 0 0 4px;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 /* Education card with top-right link icon */

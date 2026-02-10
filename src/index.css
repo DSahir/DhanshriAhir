@@ -149,34 +149,34 @@ body {
 }
 
 [data-theme="light"] .mouse-gradient-blob--primary {
-  background: #a78bfa;
+  background: #dfd4fd;
   width: 700px;
   height: 700px;
   animation: blobColorCycle 42s ease-in-out infinite, blobFade 7s ease-in-out infinite;
 }
 
 [data-theme="light"] .mouse-gradient-blob--secondary {
-  background: #fbbf24;
+  background: #feecbe;
   width: 600px;
   height: 600px;
   animation: blobColorCycle 42s ease-in-out -14s infinite, blobFade 7s ease-in-out -2.3s infinite;
 }
 
 [data-theme="light"] .mouse-gradient-blob--tertiary {
-  background: #63d0a5;
+  background: #dcf4eb;
   width: 500px;
   height: 500px;
   animation: blobColorCycle 42s ease-in-out -28s infinite, blobFade 7s ease-in-out -4.6s infinite;
 }
 
 @keyframes blobColorCycle {
-  0%, 12%       { background-color: #a78bfa; }  /* lavender */
-  16.67%, 28.5% { background-color: #67e8f9; }  /* cyan */
-  33.33%, 45.2% { background-color: #fbbf24; }  /* amber */
-  50%, 62%      { background-color: #f472b6; }  /* pink */
-  66.67%, 78.5% { background-color: #63d0a5; }  /* green */
-  83.33%, 95.2% { background-color: #facc15; }  /* yellow */
-  100%          { background-color: #a78bfa; }  /* lavender wrap */
+  0%, 12%       { background-color: #dfd4fd; }  /* lavender */
+  16.67%, 28.5% { background-color: #c5f6fd; }  /* cyan */
+  33.33%, 45.2% { background-color: #ffb700b3; }  /* amber */
+  50%, 62%      { background-color: #fbcde5; }  /* pink */
+  66.67%, 78.5% { background-color: #dcf4eb; }  /* green */
+  83.33%, 95.2% { background-color: #fef2c2; }  /* yellow */
+  100%          { background-color: #a78bfa94; }  /* lavender wrap */
 }
 
 @keyframes blobFade {
