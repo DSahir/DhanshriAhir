@@ -768,6 +768,12 @@
 
 .exp-category-title {
   flex: 1;
+  color: var(--color-experience);
+}
+
+.exp-category-icon {
+  margin-right: 8px;
+  font-size: 1.1rem;
 }
 
 .exp-category-count {
@@ -856,6 +862,11 @@
   letter-spacing: -0.2px;
   flex: 1;
   margin-right: 12px;
+}
+
+.project-title-icon {
+  margin-right: 6px;
+  font-size: 1.05rem;
 }
 
 .project-link-icon {

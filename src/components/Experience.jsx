@@ -32,7 +32,10 @@ function Experience() {
                 className={`exp-category-header ${openCategories[catIndex] ? 'open' : ''}`}
                 onClick={() => toggleCategory(catIndex)}
               >
-                <span className="exp-category-title">{category.title}</span>
+                <span className="exp-category-title">
+                  {category.icon && <span className="exp-category-icon">{category.icon}</span>}
+                  {category.title}
+                </span>
                 {openCategories[catIndex] && (
                   <span className="exp-category-count">{category.items.length}</span>
                 )}

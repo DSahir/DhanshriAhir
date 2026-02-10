@@ -22,7 +22,10 @@ function Projects() {
           {projects.map((project, index) => (
             <div key={index} className="card project-card">
               <div className="project-card-header">
-                <h3>{project.title}</h3>
+                <h3>
+                  {project.icon && <span className="project-title-icon">{project.icon}</span>}
+                  {project.title}
+                </h3>
                 <a
                   href={project.link}
                   target="_blank"

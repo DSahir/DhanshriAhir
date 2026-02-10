@@ -74,6 +74,7 @@ const portfolioData = {
   experience: [
     {
       title: 'Work Experience',
+      icon: '\u{1F4BC}',
       items: [
         {
           role: 'Associate',
@@ -117,6 +118,7 @@ const portfolioData = {
     },
     {
       title: 'Research and Publication',
+      icon: '\u{1F393}',
       items: [
         {
           role: 'Real-Time Classification of Leukocytes Using Deep Learning in Microscopic Imaging',
@@ -154,6 +156,7 @@ const portfolioData = {
     },
     {
       title: 'Student Organizations',
+      icon: '\u{1F3DB}\uFE0F',
       items: [
         {
           role: 'Accounts and Documentation Head',
@@ -183,6 +186,7 @@ const portfolioData = {
     },
     {
       title: 'Activities and Achievements',
+      icon: '\u{1F3C6}',
       items: [
         {
           role: 'Technical Writing Contributor',
@@ -229,36 +233,42 @@ const portfolioData = {
   projects: [
     {
     title: 'Price Tracer',
+    icon: '\u{1F4B2}',
     body: 'A full-stack web application designed to track and compare product prices across multiple sources. Features a Node.js backend with API endpoints, a responsive frontend built with React, and includes comprehensive documentation. The application helps users monitor price changes and make informed purchasing decisions with real-time price tracking capabilities.',
     tech: ['JavaScript', 'React', 'Node.js', 'HTML', 'CSS'],
     link: 'https://github.com/DSahir/PriceTracer',
     },
      {
       title: 'Crypto Streaming Pipeline',
+      icon: '\u{1F4CA}',
       body: 'Real-time cryptocurrency analytics pipeline for Systems for Data Science course. Ingests live trade data from Coinbase/Binance WebSockets, streams through Apache Kafka, processes into 1-second OHLC candles and volatility metrics with Parquet persistence, serves via FastAPI REST endpoints, and includes interactive Plotly dashboards plus ML trend prediction model.',
       tech: ['Python', 'FastAPI', 'Apache Kafka', 'Pandas', 'PyArrow', 'Plotly', 'Docker'],
       link: 'https://github.com/DSahir/CS532_Project',
     },
     {
     title: 'Chat Application',
+    icon: '\u{1F4AC}',
     body: 'A real-time chat application with a client-server architecture. Features a responsive web interface built with HTML, CSS, and JavaScript on the client side, paired with a robust backend server for handling message delivery and user communication. The application enables seamless real-time messaging between multiple users with a clean, intuitive interface.',
     tech: ['JavaScript', 'HTML', 'CSS', 'Node.js'],
     link: 'https://github.com/DSahir/chat-application',
     },
     {
       title: 'Cook Diaries',
+      icon: '\u{1F373}',
       body: 'A full-stack web application for sharing and discovering recipes. Built with a Node.js and Express backend with MongoDB database models, the application features user authentication, recipe management, and a responsive frontend with HTML, CSS, and JavaScript. The platform enables users to store, organize, and share their favorite cooking recipes with a clean and intuitive interface.',
       tech: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'HTML', 'CSS'],
       link: 'https://github.com/DSahir/CookDiaaries',
     },
     {
     title: 'Task App API',
+    icon: '\u{2705}',
     body: 'A JavaScript-based task management API built with Node.js and MongoDB Atlas backend. The application includes profile picture setup, database integration, and unit testing capabilities using Jest. Designed to manage task operations with persistent data storage and reliable API endpoints.',
     tech: ['JavaScript', 'Node.js', 'MongoDB', 'Jest'],
     link: 'https://github.com/DSahir/task-app-api',
     },
       {
     title: 'BlogMe',
+    icon: '\u{270D}\uFE0F',
     body: 'Full-stack blogging platform built with Node.js, Express, and EJS templating. Features user authentication (registration/login), blog CRUD operations, personal blog dashboard with statistics (max/min/avg ratings, trending blogs), global search by author, reviews/ratings system, and responsive design for reading, writing, and community interaction.',
     tech: ['Node.js', 'Express', 'EJS', 'JavaScript', 'CSS'],
     link: 'https://github.com/DSahir/BlogMe',
