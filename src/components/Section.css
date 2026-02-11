@@ -829,7 +829,6 @@
 
 /* Bold keywords in experience bullets */
 .experience-list strong {
-  color: var(--color-experience);
   font-weight: 600;
 }
 
@@ -909,7 +908,6 @@
 
 /* Bold keywords in project descriptions */
 .project-body strong {
-  color: var(--color-projects);
   font-weight: 600;
 }
 
