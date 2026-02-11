@@ -39,7 +39,7 @@ function Projects() {
                   </svg>
                 </a>
               </div>
-              <p className="project-body">{project.body}</p>
+              <p className="project-body" dangerouslySetInnerHTML={{ __html: project.body }} />
               <div className="tech-tags">
                 {project.tech.map((t, i) => (
                   <span key={i} className="tech-tag">{t}</span>

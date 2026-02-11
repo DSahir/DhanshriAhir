@@ -82,7 +82,7 @@ function Experience() {
                             <p className="timeline-institution">{item.organization}</p>
                             <ul className="experience-list">
                               {item.points.map((point, i) => (
-                                <li key={i}>{point}</li>
+                                <li key={i} dangerouslySetInnerHTML={{ __html: point }} />
                               ))}
                             </ul>
                           </div>

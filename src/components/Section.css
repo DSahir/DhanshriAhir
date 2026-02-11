@@ -827,6 +827,12 @@
   letter-spacing: -0.1px;
 }
 
+/* Bold keywords in experience bullets */
+.experience-list strong {
+  color: var(--color-experience);
+  font-weight: 600;
+}
+
 /* Experience list */
 .experience-list {
   margin: 12px 0 0;
@@ -899,6 +905,12 @@
   margin-bottom: 16px;
   flex: 1;
   font-size: 0.93rem;
+}
+
+/* Bold keywords in project descriptions */
+.project-body strong {
+  color: var(--color-projects);
+  font-weight: 600;
 }
 
 .tech-tags {
