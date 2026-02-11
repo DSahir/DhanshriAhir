@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ThemeProvider } from './components/ThemeContext';
 import MouseGradient from './components/MouseGradient';
+import LoadingScreen from './components/LoadingScreen';
 import portfolioData from './data/portfolioData';
 import Header from './components/Header';
 import About from './components/About';
@@ -15,6 +16,7 @@ const { personal } = portfolioData;
 
 function App() {
   const [activeSection, setActiveSection] = useState('About');
+  const [loading, setLoading] = useState(true);
 
   const handleNavigate = (section) => {
     setActiveSection(section);
@@ -47,6 +49,18 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  // Preload the profile image and signal readiness to the loading screen
+  useEffect(() => {
+    const img = new Image();
+    img.src = personal.avatarUrl;
+    const signalReady = () => window.dispatchEvent(new Event('app-ready'));
+    img.onload = signalReady;
+    img.onerror = signalReady;
+    // Fallback: signal ready after 4s even if image is still loading
+    const fallback = setTimeout(signalReady, 4000);
+    return () => clearTimeout(fallback);
+  }, []);
+
   useEffect(() => {
     const handleVisibility = () => {
       document.title = document.hidden ? "Where 'd You Go?" : 'Dhanshri Ahir';
@@ -55,8 +69,11 @@ function App() {
     return () => document.removeEventListener('visibilitychange', handleVisibility);
   }, []);
 
+  const handleLoadingFinished = useCallback(() => setLoading(false), []);
+
   return (
     <ThemeProvider>
+      {loading && <LoadingScreen onFinished={handleLoadingFinished} />}
       <div className="app">
         <MouseGradient />
         <Header activeSection={activeSection} onNavigate={handleNavigate} />

@@ -22,7 +22,10 @@ function Projects() {
           {projects.map((project, index) => (
             <div key={index} className="card project-card">
               <div className="project-card-header">
-                <h3>{project.title}</h3>
+                <h3>
+                  {project.icon && <span className="project-title-icon">{project.icon}</span>}
+                  {project.title}
+                </h3>
                 <a
                   href={project.link}
                   target="_blank"
@@ -36,7 +39,7 @@ function Projects() {
                   </svg>
                 </a>
               </div>
-              <p className="project-body">{project.body}</p>
+              <p className="project-body" dangerouslySetInnerHTML={{ __html: project.body }} />
               <div className="tech-tags">
                 {project.tech.map((t, i) => (
                   <span key={i} className="tech-tag">{t}</span>

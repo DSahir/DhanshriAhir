@@ -32,7 +32,10 @@ function Experience() {
                 className={`exp-category-header ${openCategories[catIndex] ? 'open' : ''}`}
                 onClick={() => toggleCategory(catIndex)}
               >
-                <span className="exp-category-title">{category.title}</span>
+                <span className="exp-category-title">
+                  {category.icon && <span className="exp-category-icon">{category.icon}</span>}
+                  {category.title}
+                </span>
                 {openCategories[catIndex] && (
                   <span className="exp-category-count">{category.items.length}</span>
                 )}
@@ -79,7 +82,7 @@ function Experience() {
                             <p className="timeline-institution">{item.organization}</p>
                             <ul className="experience-list">
                               {item.points.map((point, i) => (
-                                <li key={i}>{point}</li>
+                                <li key={i} dangerouslySetInnerHTML={{ __html: point }} />
                               ))}
                             </ul>
                           </div>
