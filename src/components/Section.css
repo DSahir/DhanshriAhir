@@ -410,8 +410,8 @@
   font-size: 0.88rem;
   color: var(--color-education);
   font-weight: 700;
-  font-style: italic;
   margin: 0 0 4px;
+  opacity: 0.8;
 }
 
 /* Education card with top-right link icon */
