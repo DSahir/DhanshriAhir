@@ -1,14 +1,31 @@
 import { useState, useEffect, useRef } from 'react';
 import './LoadingScreen.css';
 
-const phrases = [
+const allPhrases = [
   'debugging my way through life.',
   'chasing one function at a time.',
   'fluent in bits and bytes.',
   'powered by algorithms.',
   'learning, building, shipping.',
   'building on first principles.',
+  'turning coffee into code.',
+  'ctrl+S-ing the world.',
+  'one commit away from glory.',
+  'making pixels behave.',
+  'async by nature, await by choice.',
 ];
+
+// Shuffle and pick a random subset on each page load
+function shuffleArray(arr) {
+  const shuffled = [...arr];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+const phrases = shuffleArray(allPhrases).slice(0, 6);
 
 const colors = [
   '#a78bfa', // lavender
