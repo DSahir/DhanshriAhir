@@ -4,15 +4,14 @@ import './LoadingScreen.css';
 const allPhrases = [
   'debugging my way through life.',
   'chasing one function at a time.',
-  'fluent in bits and bytes.',
+  'talking in bits and bytes.',
   'powered by algorithms.',
   'learning, building, shipping.',
   'building on first principles.',
-  'turning coffee into code.',
+  'turning chats into code.',
   'ctrl+S-ing the world.',
-  'one commit away from glory.',
+  'sipping my cup of chai.',
   'making pixels behave.',
-  'async by nature, await by choice.',
 ];
 
 // Shuffle and pick a random subset on each page load

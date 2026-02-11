@@ -7,10 +7,14 @@ const { personal } = portfolioData;
 const phrases = [
   'debugging my way through life.',
   'chasing one function at a time.',
-  'fluent in bits and bytes.',
+  'talking in bits and bytes.',
   'powered by algorithms.',
   'learning, building, shipping.',
   'building on first principles.',
+  'turning chats into code.',
+  'ctrl+S-ing the world.',
+  'sipping my cup of chai.',
+  'making pixels behave.',
 ];
 
 function TypingAnimation() {

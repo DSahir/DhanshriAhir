@@ -146,7 +146,7 @@ const portfolioData = {
           logo: import.meta.env.BASE_URL + 'logos/coep.png', // Place logo at public/logos/nlp-research.png
           link: 'https://drive.google.com/file/d/1wVzOjyNJzigoEWTNx6vTrvJ7c5zOzTyV/view?usp=sharing',
           points: [
-            'Led a <strong>3-member team</strong> to build an <strong>NLP-based</strong> interview analysis framework, reducing subjective evaluation bias by applying probabilistic <strong>topic modeling (LDA)</strong> and <strong>topic change point detection</strong> on real-world interview transcripts.',
+            'Collaborated in <strong>3-member team</strong> to build an <strong>NLP-based</strong> interview analysis framework, reducing subjective evaluation bias by applying probabilistic <strong>topic modeling (LDA)</strong> and <strong>topic change point detection</strong> on real-world interview transcripts.',
             'Analyzed <strong>138 mock interviews</strong> (≈10.5 hours) from <strong>69 MIT students</strong>, enabling large-scale conversational insights by performing end-to-end NLP preprocessing including <strong>tokenization</strong>, <strong>lemmatization</strong>, stopword removal, and transcript normalization.',
             'Evaluated and compared <strong>5+ topic modeling</strong> and topic shift detection approaches, grounded in a survey of <strong>10+ research papers</strong>, using coherence scores, <strong>LDA</strong>, <strong>LSA</strong>, and <strong>CPD</strong> to justify model and parameter selection.',
             'Improved topic interpretability and temporal segmentation, measured via <strong>coherence trends</strong> and dominant-topic distributions, by tuning <strong>LDA/LSA hyperparameters</strong> and applying <strong>change point detection</strong> to topic probability time series.',
@@ -166,7 +166,7 @@ const portfolioData = {
           logo: import.meta.env.BASE_URL + 'logos/pune-startup-fest.png', // Place logo at public/logos/pune-startup-fest.png
           link: 'https://www.coeptech.ac.in/student-corner/student-clubs/pune-startup-fest/',
           points: [
-            'Organized the fest to facilitate <strong>₹3.5 Cr funding</strong> for startups and <strong>250+ student internships</strong>',
+            'Coordinated a cross-functional team to execute a flagship festival, successfully facilitating <strong>₹3.5 Cr funding</strong> in startup funding and securing <strong>250+ student internships</strong>',
             'Managed <strong>budgeting</strong>, <strong>financial documentation</strong>, and permission-related processes to ensure smooth and compliant fest operations',
           ],
         },
@@ -178,7 +178,7 @@ const portfolioData = {
           logo: import.meta.env.BASE_URL + 'logos/bhau.png', // Place logo at public/logos/bhau.png
           link: 'https://bhau.org/bhau-e-cell/',
           points: [
-            'Increased student participation in <strong>entrepreneurship events</strong> by promoting startup opportunities and coordinating outreach for <strong>Vowels E-Cell</strong>.',
+            'Increased student participation in <strong>entrepreneurship events</strong> by promoting startup opportunities and coordinating public relations for <strong> E-Cell</strong>.',
             'Executed <strong>startup workshops</strong> and <strong>networking events</strong> by coordinating with founders, mentors, and managing on-ground operations.',
           ],
         },
@@ -208,7 +208,7 @@ const portfolioData = {
           logo: import.meta.env.BASE_URL + 'logos/absa.png', // Place logo at public/logos/absa.png
           link: 'https://www.anjalibhagwat.com',
           points: [
-            'Trained at <strong>ABSA – Anjali Bhagwat Shooting Academy</strong>, Pune, in <strong>10m air rifle</strong> basics, safety, posture, and precision shooting techniques under structured coaching.',
+            'Trained at <strong>ABSA – Anjali Bhagwat Shooting Academy</strong>, Pune, in <strong>10m rifle</strong> basics, safety, posture, and precision shooting techniques under structured coaching.',
             'Practiced under the mentorship framework established by <strong>3-time Olympian</strong> and former <strong>world no. 1</strong> rifle shooter <strong>Anjali Bhagwat</strong>, focusing on discipline, consistency, and competition-oriented training.',
           ],
         },
@@ -218,7 +218,7 @@ const portfolioData = {
           period: '',
           location: 'Akola, India',
           logo: import.meta.env.BASE_URL + 'logos/teach.png',
-          link: 'https://drive.google.com/drive/folders/1revTJZGgwTT0bFH1q6d9kHMiHBbK1YS2',
+          link: 'https://drive.google.com/file/d/17-0ByQS2_RLvZvcFG8wpyFmff6TMLP8y/view?usp=sharing',
           points: [
             'Mentored and taught <strong>50+ students</strong> mathematics and basic computer skills at a <strong>tribal Ashram school</strong> during semester breaks, focusing on building foundational numeracy and digital literacy.',
           ],
@@ -233,13 +233,13 @@ const portfolioData = {
   projects: [
     {
     title: 'Price Tracer',
-    icon: '\u{1F4B2}',
+    icon: '\u{1F4C8}',
     body: 'A <strong>full-stack web application</strong> designed to track and compare product prices across multiple sources. Features a <strong>Node.js</strong> backend with <strong>API endpoints</strong>, a responsive frontend built with <strong>React</strong>, and includes comprehensive documentation. The application helps users monitor price changes and make informed purchasing decisions with <strong>real-time price tracking</strong> capabilities.',
     tech: ['JavaScript', 'React', 'Node.js', 'HTML', 'CSS'],
     link: 'https://github.com/DSahir/PriceTracer',
     },
      {
-      title: 'Crypto Streaming Pipeline',
+      title: 'Crypto Streaming',
       icon: '\u{1F4CA}',
       body: '<strong>Real-time cryptocurrency analytics pipeline</strong> for Systems for Data Science course. Ingests live trade data from <strong>Coinbase/Binance WebSockets</strong>, streams through <strong>Apache Kafka</strong>, processes into 1-second <strong>OHLC candles</strong> and volatility metrics with <strong>Parquet</strong> persistence, serves via <strong>FastAPI REST</strong> endpoints, and includes interactive <strong>Plotly dashboards</strong> plus <strong>ML trend prediction</strong> model.',
       tech: ['Python', 'FastAPI', 'Apache Kafka', 'Pandas', 'PyArrow', 'Plotly', 'Docker'],
